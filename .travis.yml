@@ -1,0 +1,3 @@
+script:
+
+bundle exec rake db:auto_migrate RACK_ENV=test
