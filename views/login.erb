@@ -1,32 +1,20 @@
-<style>
-  .log_in_form {
-  width: 400px;
-  margin: auto;
-  clear: both;
-  border-style: solid;
-}
 
-.log_in_form input {
-  width: 100%;
-  clear: both;
-}
 
-.logo {
-  width: 80px;
-  height: 80px;
-}
-</style>
 
 <body>
-
+  <link rel="stylesheet" href="/style.css">
 <div class='menu' align='right'>
+
 <a href="/">
 <img src='/images/makers_logo.png' class="logo" align="left"></img>
 </a>
-  <form action="/sessions/new">
-<button id='login' >Login</button>
-</form>
+  <ul>
+    <li><a class='active' href='/sessions/new'>Login</a></li>
+
+  </ul>
 </div>
+
+
 <div class='log_in_form' align='center'>
 <form id='log_in' method='post' action=''>
   Log in to MakersBnB

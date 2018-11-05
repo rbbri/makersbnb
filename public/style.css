@@ -1,0 +1,67 @@
+
+
+  body {
+      font: normal 15px Verdana, sans-serif;
+  }
+
+  .sign_up_form {
+  width: 400px;
+  margin: auto;
+  clear: both;
+  border-style: solid;
+  padding-right: 6px;
+
+}
+
+.sign_up_form input {
+  width: 100%;
+  clear: both;
+  align: center;
+
+}
+
+.log_in_form {
+width: 400px;
+margin: auto;
+clear: both;
+border-style: solid;
+}
+
+.log_in_form input {
+width: 100%;
+clear: both;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #808080;
+}
