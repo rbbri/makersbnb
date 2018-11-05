@@ -8,9 +8,9 @@ group :test do
   gem 'capybara'
   gem 'rspec'
 end
-gem 'data_mapper'
+
+gem 'activerecord'
 gem 'database_cleaner'
-gem 'dm-postgres-adapter'
 gem 'flog'
 gem 'json', '~> 1.6'
 gem 'pg'
@@ -21,3 +21,6 @@ gem 'rubocop'
 gem 'simplecov'
 gem 'simplecov-console'
 gem 'sinatra'
+gem 'sinatra-activerecord'
+gem 'standalone_migrations'
+gem 'tux'
