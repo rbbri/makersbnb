@@ -26,4 +26,12 @@ I would like to be able to request a booking
 As a user
 So that I can ensure I don't have multiple bookings
 I would like to be able to confirm booking requests
+
+As a user
+So that I can avoid having bookings that clash
+I would like the property to be made unavailable when booked
+
+As a user
+So that I can choose who to rent my space to
+I would like spaces to still be available until a booking is confirmed
 ```
