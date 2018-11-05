@@ -13,7 +13,7 @@
   </ul>
 </div>
 
-<h2>Welcome Gordon!</h2>
+
 
 <% if @user.nil? %>
   <div class='sign_up_form' align='center'>
@@ -44,6 +44,8 @@
       <input type="submit" name="Sign Up" value="Sign Up">
     </p>
   </div>
+<% else %>
+  <h2>Welcome <%= @user.name %>!</h2>
 <% end %>
 
 </body>
