@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'active_record'
 require_relative './models/user'
+require_relative './models/space'
 
 def db_configuration
   db_configuration_file = "./db/config.yml"
@@ -20,6 +21,7 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces' do
+    @spaces = Space.all
     erb :spaces
   end
 
@@ -27,7 +29,8 @@ class MakersBNB < Sinatra::Base
     erb :new_space
   end
 
-  post '/spaces/:id' do
+  post '/spaces' do
+    space = Space.create(name: params[:name])
     redirect ('/spaces')
   end
 
