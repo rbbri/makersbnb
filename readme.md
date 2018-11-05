@@ -3,7 +3,7 @@
 - Fork this repo
 - Run `bundle install`
 - If you do not already have the databases 'makersbnb_development' and 'makersbnb_test', run `rake db:create`
-- Run `rake db:mirgrate`
+- Run `rake db:migrate`
 - To launch the app from the command line use `rackup` and visit localhost:9292
 
 
