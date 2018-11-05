@@ -15,8 +15,20 @@ class MakersBNB < Sinatra::Base
     erb :index
   end
 
-  get'/sessions/new' do
+  get '/sessions/new' do
     erb :login
+  end
+
+  get '/spaces' do
+    erb :spaces
+  end
+
+  get '/spaces/new' do
+    erb :new_space
+  end
+
+  post '/spaces/:id' do
+    redirect ('/spaces')
   end
 
 end
