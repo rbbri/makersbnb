@@ -10,13 +10,24 @@
   width: 100%;
   clear: both;
 }
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
 </style>
 
 
 <body>
 
 <div class='menu' align='right'>
-<button id='login'>Login</button>
+<a href="/">
+<img src='/images/makers_logo.png' class="logo" align="left"></img>
+</a>
+<form action="/sessions/new">
+<button id='login' >Login</button>
+</form>
 </div>
 <h1>'Hello MakersBNB'</h1>
 

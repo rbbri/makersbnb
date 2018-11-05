@@ -7,4 +7,8 @@ class MakersBNB < Sinatra::Base
     erb :index
   end
 
+  get'/sessions/new' do
+    erb :login
+  end
+
 end

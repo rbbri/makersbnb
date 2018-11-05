@@ -1,0 +1,44 @@
+<style>
+  .log_in_form {
+  width: 400px;
+  margin: auto;
+  clear: both;
+  border-style: solid;
+}
+
+.log_in_form input {
+  width: 100%;
+  clear: both;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+</style>
+
+<body>
+
+<div class='menu' align='right'>
+<a href="/">
+<img src='/images/makers_logo.png' class="logo" align="left"></img>
+</a>
+  <form action="/sessions/new">
+<button id='login' >Login</button>
+</form>
+</div>
+<div class='log_in_form' align='center'>
+<form id='log_in' method='post' action=''>
+  Log in to MakersBnB
+  <p>
+<label for='email'> Email Address  </label>
+  <input type="text" id='email' name="email" value="">
+  </p>
+  <p>
+  <label for='password'> Password </label>
+  <input type="text" id='password' name="password" value="">
+  </p>
+  <input type="submit" name="log_in" value="Log in">
+  </p>
+</div>
+</body>
