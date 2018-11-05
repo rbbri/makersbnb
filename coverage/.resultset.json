@@ -1,6 +1,18 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/robin/Projects/makersbnb/spec/features/listing_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
       "/Users/robin/Projects/makersbnb/spec/features/signup_spec.rb": [
         1,
         null,
@@ -12,6 +24,6 @@
         null
       ]
     },
-    "timestamp": 1541434278
+    "timestamp": 1541434996
   }
 }
