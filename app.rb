@@ -1,7 +1,11 @@
 require 'sinatra/base'
 require 'active_record'
 require_relative './models/user'
+
+require_relative './models/space'
+
 require 'pry'
+
 
 def db_configuration
   db_configuration_file = "./db/config.yml"
@@ -25,14 +29,26 @@ class MakersBNB < Sinatra::Base
       password: params[:password],
       email: params[:email]
     )
-    p params
-    # binding.pry
     session[:user] = user
     redirect '/'
   end
 
   get'/sessions/new' do
     erb :login
+  end
+
+  get '/spaces' do
+    @spaces = Space.all
+    erb :spaces
+  end
+
+  get '/spaces/new' do
+    erb :new_space
+  end
+
+  post '/spaces' do
+    space = Space.create(name: params[:name])
+    redirect ('/spaces')
   end
 
 end
