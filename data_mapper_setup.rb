@@ -4,7 +4,7 @@ env = ENV['RACK_ENV'] || 'development'
 
 DataMapper.setup(:default, "postgres://localhost/makersbnb_#{env}")
 
-# require './lib'
+require './app.rb'
 
 DataMapper.finalize
 
