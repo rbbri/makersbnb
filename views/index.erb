@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <body>
 <link rel="stylesheet" href="/style.css">
 <div class='menu' align='right'>
@@ -14,25 +13,37 @@
   </ul>
 </div>
 
+<h2>Welcome Gordon!</h2>
 
+<% if @user.nil? %>
+  <div class='sign_up_form' align='center'>
+  <form id='sign_up' action='/users' method='post'>
+    Sign up to MakersBnB
 
-<div class='sign_up_form' align='center'>
-<form id='sign_up' method='post' action=''>
-  Sign up to MakersBnB
-  <p>
-<label for='email' align='left'> Email Address  </label>
-  <input type="text" id='email' name="email" value="">
-  </p>
-  <p>
-  <label for='password' align='left'> Password </label>
-  <input type="text" id='password' name="password" value="">
-  </p>
-  <p>
-    <label for='password_confirmation'> Password confirmation  </label>
-  <input type="text" id='password_confirmation' name="password_confirmation" value="">
-  </p>
-  <p>
-  <input type="submit" name="sign_up" value="Sign up">
-  </p>
-</div>
+    <p>
+      <label for='name' align='left'> Name  </label>
+      <input type="text" id='name' name='name'>
+    </p>
+
+    <p>
+      <label for='username' align='left'> Username  </label>
+      <input type="text" id='username' name='username'>
+    </p>
+
+    <p>
+      <label for='password' align='left'> Password </label>
+      <input type="text" id='password' name='password'>
+    </p>
+
+    <p>
+      <label for='email' align='left'> Email Address  </label>
+      <input type="text" id='email' name='email'>
+    </p>
+
+    <p>
+      <input type="submit" name="Sign Up" value="Sign Up">
+    </p>
+  </div>
+<% end %>
+
 </body>
