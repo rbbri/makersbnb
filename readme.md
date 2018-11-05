@@ -2,7 +2,7 @@
 
 - Fork this repo
 - Run `bundle install`
-- Run `rake setup`
+- Run `rake db:setup`
 - To launch the app from the command line use `rackup` and visit localhost:9292
 
 
