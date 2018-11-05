@@ -1,3 +1,12 @@
+## How to use ##
+
+- Fork this repo
+- Run `bundle install`
+- Run `rake setup`
+- To launch the app from the command line use `rackup` and visit localhost:9292
+
+
+## User Stories ##
 ```
 As a user
 So I can use the site
@@ -36,7 +45,7 @@ So that I can choose who to rent my space to
 I would like spaces to still be available until a booking is confirmed
 ```
 
-## Our Approach
+## Our Approach ##
 
 We are using Ruby and Sinatra to implement this project. We will use rubocop to assess style, simplecov to assess our test coverage and flog to assess the complexity of our code.
 
