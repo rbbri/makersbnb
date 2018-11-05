@@ -1,1 +1,42 @@
+<style>
+  .sign_up_form {
+  width: 400px;
+  margin: auto;
+  clear: both;
+  border-style: solid;
+}
+
+.sign_up_form input {
+  width: 100%;
+  clear: both;
+}
+</style>
+
+
+<body>
+
+<div class='menu' align='right'>
+<button id='login'>Login</button>
+</div>
 <h1>'Hello MakersBNB'</h1>
+
+<div class='sign_up_form' align='center'>
+<form id='sign_up' method='post' action=''>
+  Sign up to MakersBnB
+  <p>
+<label for='email' align='left'> Email Address  </label>
+  <input type="text" id='email' name="email" value="">
+  </p>
+  <p>
+  <label for='password' align='left'> Password </label>
+  <input type="text" id='password' name="password" value="">
+  </p>
+  <p>
+    <label for='password_confirmation'> Password confirmation  </label>
+  <input type="text" id='password_confirmation' name="password_confirmation" value="">
+  </p>
+  <p>
+  <input type="submit" name="sign_up" value="Sign up">
+  </p>
+</div>
+</body>
