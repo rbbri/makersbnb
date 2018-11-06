@@ -49,6 +49,10 @@ class MakersBNB < Sinatra::Base
       username: params[:username],
       password: params[:password]
     )
+    if user.nil?
+      flash[:error] = "Incorrect username or password"
+      redirect '/sessions/new'
+    end
     session[:user] = user
     redirect '/spaces'
   end
