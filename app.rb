@@ -64,4 +64,16 @@ class MakersBNB < Sinatra::Base
     Space.create(name: params[:name])
     redirect '/spaces'
   end
+
+
+  get '/spaces/:id' do
+    Space.find(params[:id])
+    erb :spaces_id
+  end
+
+  get '/requests' do
+    erb :requests
+  end
+
+
 end
