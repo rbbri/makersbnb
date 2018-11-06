@@ -1,23 +1,38 @@
 <body>
   <link rel="stylesheet" href="/style.css">
-<div class='menu' align='right'>
+  <div class='menu' align='right'>
 
-<a href="/">
-<img src='/images/makers_logo.png' class="logo" align="left"></img>
-</a>
-  <ul>
-    <li><a class='active' href=''>Spaces</a></li>
-    <li><a href=''>Requests</a></li>
-    <li><a href='/'>Sign out</a></li>
-  </ul>
-</div>
+    <a href="/">
+      <img src='/images/makers_logo.png' class="logo" align="left"></img>
+    </a>
+    <ul>
+      <li>
+        <form class='active' action = '/spaces'>
+          <input type="submit" value="Spaces">
+        </form>
+      </li>
+      <li>
+        <form action = '/requests'>
+          <input type="submit" value="Requests">
+        </form>
+      </li>
+      <li>
+        <form action = '/sessions' method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Logout">
+        </form>
+      </li>
+    </ul>
+  </div>
 
-<h1> List a Space </h1>
+  <h1> List a Space </h1>
 
-<div class="log_in_form">
-  <form method="post" action="/spaces">
-    Name
-    <input type="text" name="name"></input>
-    <input type="submit" value="List my Space"></input>
-  </form>
-</div>
+  <div class="log_in_form">
+    <form method="post" action="/spaces">
+      <h3>Name</h3>
+      <input type="text" name="name">
+      <input type="text" name="description">
+      <input type="text" name="price">
+      <input type="submit" value="List my Space">
+    </form>
+  </div>

@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 
+<% flash.keys.each do |type| %>
+  <div data-alert class="flash <%= type %> alert-box radius">
+    <%= flash[type] %>
+    <a href="#" class="close">&times;</a>
+  </div>
+<% end %>
+
+
 <body>
 <link rel="stylesheet" href="/style.css">
 <div class='menu' align='right'>
@@ -7,10 +15,13 @@
 <a href="/">
 <img src='/images/makers_logo.png' class="logo" align="left"></img>
 </a>
-  <ul>
-    <li><a href='/sessions/new'>Login</a></li>
-
-  </ul>
+<ul>
+  <li>
+    <form action = '/sessions/new'>
+      <input type="submit" value="Login">
+    </form>
+  </li>
+</ul>
 </div>
 
 
@@ -18,34 +29,31 @@
 <% if @user.nil? %>
   <div class='sign_up_form' align='center'>
   <form id='sign_up' action='/users' method='post'>
-    Sign up to MakersBnB
-
+    <h3>Sign up to MakersBnB</h3>
     <p>
       <label for='name' align='left'> Name  </label>
       <input type="text" id='name' name='name'>
     </p>
-
     <p>
-      <label for='username' align='left'> Username  </label>
+      <label for='username' align='left'>Username</label>
       <input type="text" id='username' name='username'>
     </p>
 
+    <div>
+      <%= flash[:error] %>
+    </div>
     <p>
       <label for='password' align='left'> Password </label>
       <input type="text" id='password' name='password'>
     </p>
-
     <p>
       <label for='email' align='left'> Email Address  </label>
       <input type="text" id='email' name='email'>
     </p>
-
     <p>
       <input type="submit" name="Sign Up" value="Sign Up">
     </p>
   </div>
-<% else %>
-  <h2>Welcome <%= @user.name %>!</h2>
 <% end %>
 
 </body>

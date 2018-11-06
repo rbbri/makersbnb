@@ -1,6 +1,7 @@
 require './models/space'
 
 describe 'Space' do
+
   describe "Validations" do
     # the other tests are here
     it "has many requests" do
@@ -12,4 +13,5 @@ describe 'Space' do
       expect(association.macro).to eq :belongs_to
     end
   end
+
 end
