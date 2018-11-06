@@ -51,4 +51,8 @@ class MakersBNB < Sinatra::Base
     redirect ('/spaces')
   end
 
+  get '/spaces/:id' do
+    Space.find(params[:id])
+  end
+
 end
