@@ -1,7 +1,17 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/listing_spec.rb": [
+      "/Users/Imogen/Projects/week6/makersbnb/spec/features/dates_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Imogen/Projects/week6/makersbnb/spec/features/listing_spec.rb": [
         1,
         1,
         1,
@@ -13,7 +23,7 @@
         null,
         null
       ],
-      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/requests_spec.rb": [
+      "/Users/Imogen/Projects/week6/makersbnb/spec/features/requests_spec.rb": [
         1,
         1,
         1,
@@ -22,7 +32,7 @@
         null,
         null
       ],
-      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/signup_spec.rb": [
+      "/Users/Imogen/Projects/week6/makersbnb/spec/features/signup_spec.rb": [
         1,
         null,
         1,
@@ -38,7 +48,7 @@
         null,
         null
       ],
-      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/space_spec.rb": [
+      "/Users/Imogen/Projects/week6/makersbnb/spec/space_spec.rb": [
         1,
         null,
         1,
@@ -46,6 +56,6 @@
         null
       ]
     },
-    "timestamp": 1541501513
+    "timestamp": 1541516883
   }
 }

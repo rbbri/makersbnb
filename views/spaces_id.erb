@@ -12,10 +12,13 @@
   </ul>
 </div>
 
+<h1 align="center"> <%= @space.name %> </h1>
+
+<form action='/requests/new' method="post">
 <table class="start_date" align="center">
     <tr>
     <th>CHECK IN</th>
-    <td><select id="date">
+    <td><select name="in_date">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -48,7 +51,7 @@
       <option value="30">30</option>
       <option value="31">31</option>
     </select></td>
-    <td><select id="month">
+    <td><select name="in_month">
       <option value="January">January</option>
       <option value="February">February</option>
       <option value="March">March</option>
@@ -62,14 +65,14 @@
       <option value="November">November</option>
       <option value="December">December</option>
     </select></td>
-    <td><select id="year">
+    <td><select name="in_year">
       <option value="2018">2018</option>
       <option value="2019">2019</option>
     </select></td>
 
         <tr class="end_date">
         <th>CHECK OUT</th>
-        <td><select id="date">
+        <td><select name="out_date">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -102,7 +105,7 @@
           <option value="30">30</option>
           <option value="31">31</option>
         </select></td>
-        <td><select id="month">
+        <td><select name="out_month">
           <option value="January">January</option>
           <option value="February">February</option>
           <option value="March">March</option>
@@ -116,12 +119,12 @@
           <option value="November">November</option>
           <option value="December">December</option>
         </select></td>
-        <td><select id="year">
+        <td><select name="out_year">
           <option value="2018">2018</option>
           <option value="2019">2019</option>
         </select></td>
-        <td>
-      </table>
+      <td><input type="submit" value="Request to Book"></input></td>
+    </table></form>
 
 
 </body>

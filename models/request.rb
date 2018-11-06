@@ -1,0 +1,9 @@
+class Request < ActiveRecord::Base
+  belongs_to :users, foreign_key: 'user_id'
+  belongs_to :spaces, foreign_key: 'space_id'
+  validates :user_id, presence: true
+  validates :space_id, presence: true
+  # validates :date_created, presence: true
+  validates :booking_date, presence: true
+  # validates :confirmation_status
+end
