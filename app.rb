@@ -1,9 +1,7 @@
 require 'sinatra/base'
 require 'active_record'
 require_relative './models/user'
-
 require_relative './models/space'
-
 require 'pry'
 
 
@@ -49,6 +47,10 @@ class MakersBNB < Sinatra::Base
   post '/spaces' do
     space = Space.create(name: params[:name])
     redirect ('/spaces')
+  end
+
+  get '/requests' do
+    erb :requests
   end
 
 end
