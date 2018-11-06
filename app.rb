@@ -31,7 +31,16 @@ class MakersBNB < Sinatra::Base
       email: params[:email]
     )
     session[:user] = user
-    redirect '/'
+    redirect '/spaces'
+  end
+
+  post '/sessions' do
+    user = User.find_by(
+      username: params[:username],
+      password: params[:password]
+    )
+    session[:user] = user
+    redirect '/spaces'
   end
 
   get '/sessions/new' do
@@ -44,6 +53,7 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces' do
+    @user = session[:user]
     @spaces = Space.all
     erb :spaces
   end
