@@ -1,3 +1,8 @@
-script:
 
+language: ruby
+rvm:
+ - 2.5.1
+ - jruby
+
+ script:
 bundle exec rake db:auto_migrate RACK_ENV=test
