@@ -12,7 +12,7 @@ feature 'signing-up' do
     expect(page).to have_content 'This username is already in use'
   end
 
-  scenario 'a user signs up with a pre existing username' do
+  scenario 'a user signs up with a pre existing email' do
     signup1
     click_button 'Logout'
     signup_duplicate_email
