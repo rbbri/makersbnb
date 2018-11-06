@@ -4,16 +4,14 @@ require 'capybara/rspec'
 require 'rspec'
 require_relative './features/helper_methods'
 require_relative './../app'
+require 'simplecov'
+require 'simplecov-console'
+require 'database_cleaner'
 
 Capybara.app = MakersBNB
 
-require 'simplecov'
-require 'simplecov-console'
-
 SimpleCov.formatter = SimpleCov::Formatter::Console
 SimpleCov.start
-
-require 'database_cleaner'
 
 RSpec.configure do |config|
   config.before(:suite) do

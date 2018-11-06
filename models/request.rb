@@ -1,3 +1,4 @@
+# Request model
 class Request < ActiveRecord::Base
   belongs_to :user, foreign_key: 'user_id'
   belongs_to :space, foreign_key: 'space_id'

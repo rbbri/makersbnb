@@ -1,5 +1,4 @@
 def signup1
-  visit '/'
   fill_in(:username, with: 'user1')
   fill_in(:password, with: 'password1')
   fill_in(:name, with: 'User One')
@@ -8,7 +7,6 @@ def signup1
 end
 
 def signup2
-  visit '/'
   fill_in(:username, with: 'user2')
   fill_in(:password, with: 'password2')
   fill_in(:name, with: 'User Two')
@@ -17,7 +15,6 @@ def signup2
 end
 
 def signup_duplicate_user
-  visit '/'
   fill_in(:username, with: 'user1')
   fill_in(:password, with: 'password1')
   fill_in(:name, with: 'User One')
@@ -26,7 +23,6 @@ def signup_duplicate_user
 end
 
 def signup_duplicate_email
-  visit '/'
   fill_in(:username, with: 'user2')
   fill_in(:password, with: 'password1')
   fill_in(:name, with: 'User One')
@@ -35,7 +31,6 @@ def signup_duplicate_email
 end
 
 def signin1
-  visit '/'
   click_button 'Login'
   fill_in(:username, with: 'user1')
   fill_in(:password, with: 'password1')

@@ -8,6 +8,8 @@ group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'rspec'
+  gem 'simplecov'
+  gem 'simplecov-console'
 end
 
 gem 'activerecord'
@@ -19,8 +21,6 @@ gem 'pry'
 gem 'rack'
 gem 'rake'
 gem 'rubocop'
-gem 'simplecov'
-gem 'simplecov-console'
 gem 'sinatra'
 gem 'sinatra-flash'
 gem 'standalone_migrations'
