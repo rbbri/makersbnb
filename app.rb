@@ -103,7 +103,7 @@ class MakersBNB < Sinatra::Base
       params[:out_year]
     ]
     Request.create(
-      booking_date: dates,
+      booking_date: dates.join(" "),
       user_id: @user.id,
       space_id: params[:id]
     )
