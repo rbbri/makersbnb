@@ -73,10 +73,14 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.create(name: params[:name], description: params[:description], price: params[:price], user_id: session[:user].id)
+    Space.create(
+      name: params[:name],
+      description: params[:description],
+      price: params[:price],
+      user_id: session[:user].id
+    )
     redirect '/spaces'
   end
-
 
   get '/spaces/:id' do
     Space.find(params[:id])
@@ -86,6 +90,4 @@ class MakersBNB < Sinatra::Base
   get '/requests' do
     erb :requests
   end
-
-
 end

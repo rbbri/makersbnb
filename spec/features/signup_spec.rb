@@ -18,5 +18,4 @@ feature 'signing-up' do
     signup_duplicate_email
     expect(page).to have_content 'This email is already in use'
   end
-
 end
