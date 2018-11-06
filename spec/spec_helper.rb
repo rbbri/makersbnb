@@ -2,6 +2,7 @@ ENV['ENVIRONMENT'] = 'test'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require_relative "./features/helper_methods"
 require_relative './../app'
 
 Capybara.app = MakersBNB
