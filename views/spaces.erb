@@ -18,5 +18,8 @@
 </form>
 
 <% @spaces.each do |space|%>
-<%= space.name %>
+<a href="/spaces/<%= space.id %>">
+<p name="name"><%= space.name %>
+<span id="id"><%= space.id %></span></p>
+</a>
 <% end %>
