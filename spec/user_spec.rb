@@ -1,6 +1,6 @@
+require './models/user'
 describe 'User' do
   describe "Validations" do
-    # the other tests are here
     it "has many spaces" do
       association = User.reflect_on_association(:spaces)
       expect(association.macro).to eq :has_many

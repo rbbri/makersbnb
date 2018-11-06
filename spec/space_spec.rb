@@ -1,9 +1,6 @@
 require './models/space'
-
 describe 'Space' do
-
   describe "Validations" do
-    # the other tests are here
     it "has many requests" do
       association = Space.reflect_on_association(:requests)
       expect(association.macro).to eq :has_many
@@ -13,5 +10,4 @@ describe 'Space' do
       expect(association.macro).to eq :belongs_to
     end
   end
-
 end

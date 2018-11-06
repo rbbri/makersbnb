@@ -1,5 +1,6 @@
 feature 'signing in' do
   before do
+    visit '/'
     signup1
     click_button 'Logout'
   end
@@ -8,9 +9,11 @@ feature 'signing in' do
     expect(page).to have_content 'Sign up to MakersBnB'
     expect(page).not_to have_content 'Welcome User One!'
   end
+
   scenario 'signed up user signs out and signs back in' do
     signin1
     expect(page).to have_current_path('/spaces')
+    expect(page).to have_content 'Welcome User One!'
   end
 
   scenario 'signed up user signs in with wrong password' do
