@@ -1,19 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/listing_spec.rb": [
+
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/requests_spec.rb": [
         1,
         1,
         1,
@@ -22,19 +12,30 @@
         null,
         null
       ],
-      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/signup_spec.rb": [
+
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
         1,
         null,
         1,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
+        null
+      ],
+      "/Users/robin/Projects/makersbnb/spec/features/signup_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -42,10 +43,8 @@
         1,
         null,
         1,
-        null,
         null
       ]
     },
-    "timestamp": 1541501513
-  }
+
 }

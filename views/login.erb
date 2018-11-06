@@ -1,29 +1,31 @@
 <body>
   <link rel="stylesheet" href="/style.css">
-<div class='menu' align='right'>
+  <div class='menu' align='right'>
+    <a href="/">
+      <img src='/images/makers_logo.png' class="logo" align="left"></img>
+    </a>
+    <ul>
+      <li>
+        <form action = '/sessions/new'>
+          <input class='active' type="submit" value="Login">
+        </form>
+      </li>
+    </ul>
+  </div>
 
-<a href="/">
-<img src='/images/makers_logo.png' class="logo" align="left"></img>
-</a>
-  <ul>
-    <li><a class='active' href='/sessions/new'>Login</a></li>
-
-  </ul>
-</div>
-
-
-<div class='log_in_form' align='center'>
-<form id='log_in' method='post' action=''>
-  Log in to MakersBnB
-  <p>
-<label for='email'> Email Address  </label>
-  <input type="text" id='email' name="email" value="">
-  </p>
-  <p>
-  <label for='password'> Password </label>
-  <input type="text" id='password' name="password" value="">
-  </p>
-  <input type="submit" name="log_in" value="Log in">
-  </p>
-</div>
+  <div class='log_in_form' align='center'>
+    <form id='log_in' method='post' action='/sessions'>
+      <h3>Log in to MakersBnB</h3>
+      <p>
+        <label for='username'> Username </label>
+        <input type="text" id='username' name="username">
+      </p>
+      <p>
+        <label for='password'> Password </label>
+        <input type="text" id='password' name="password">
+      </p>
+      <p>
+        <input type="submit" id="log_in" value="Login">
+      </p>
+  </div>
 </body>

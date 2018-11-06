@@ -4,15 +4,16 @@ require_relative './models/user'
 require_relative './models/space'
 require 'pry'
 
-
 def db_configuration
-  db_configuration_file = "./db/config.yml"
-  YAML.load(File.read(db_configuration_file))
+  db_configuration_file = './db/config.yml'
+  YAML.safe_load(File.read(db_configuration_file), [], [], true)
 end
 
-ActiveRecord::Base.establish_connection(db_configuration["development"])
+ActiveRecord::Base.establish_connection(db_configuration['development'])
 
+# MakersBnB App
 class MakersBNB < Sinatra::Base
+  use Rack::MethodOverride
   enable :sessions
 
   get '/' do
@@ -28,14 +29,29 @@ class MakersBNB < Sinatra::Base
       email: params[:email]
     )
     session[:user] = user
-    redirect '/'
+    redirect '/spaces'
   end
 
-  get'/sessions/new' do
+  post '/sessions' do
+    user = User.find_by(
+      username: params[:username],
+      password: params[:password]
+    )
+    session[:user] = user
+    redirect '/spaces'
+  end
+
+  get '/sessions/new' do
     erb :login
   end
 
+  delete '/sessions' do
+    session[:user] = nil
+    redirect '/'
+  end
+
   get '/spaces' do
+    @user = session[:user]
     @spaces = Space.all
     erb :spaces
   end
@@ -45,8 +61,8 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/spaces' do
-    space = Space.create(name: params[:name])
-    redirect ('/spaces')
+    Space.create(name: params[:name])
+    redirect '/spaces'
   end
 
 
@@ -58,5 +74,6 @@ class MakersBNB < Sinatra::Base
   get '/requests' do
     erb :requests
   end
+
 
 end

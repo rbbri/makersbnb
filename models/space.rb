@@ -1,3 +1,4 @@
+# space model
 class Space < ActiveRecord::Base
   validates :name, presence: true
   # validates :description, presence: true
