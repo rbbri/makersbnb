@@ -6,6 +6,6 @@ rvm:
 
 script:
  - bundle install
- - db:create
- - db:auto_migrate
- - db:test:prepare
+ - bundle exec rake db:create
+ - bundle exec rake db:auto_migrate
+ - bundle exec rake db:test:prepare
