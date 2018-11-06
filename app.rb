@@ -3,6 +3,7 @@ require 'sinatra/flash'
 require 'active_record'
 require_relative './models/user'
 require_relative './models/space'
+require_relative './models/request'
 require 'pry'
 
 def db_configuration
@@ -88,10 +89,24 @@ class MakersBNB < Sinatra::Base
 
   get '/spaces/:id' do
     Space.find(params[:id])
+    @space = Space.find(params[:id])
+    session[:space] = @space
     erb :spaces_id
   end
 
+  post '/requests/new' do
+    @user = session[:user]
+    @space = session[:space]
+    dates = params[:in_date], params[:in_month], params[:in_year], params[:out_date], params[:out_month], params[:out_year]
+    request1 = Request.create(booking_date: dates, user_id: @user.id, space_id: @space.id)
+    session[:tester] = request1
+    redirect '/requests'
+  end
+
   get '/requests' do
+    @booking_requests = Request.all
+
     erb :requests
   end
+
 end

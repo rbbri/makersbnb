@@ -6,6 +6,7 @@ class CreateSpaces < ActiveRecord::Migration[5.2]
       table.string :description
       table.integer :price
       table.integer :user_id
+      table.references :user
     end
   end
 end

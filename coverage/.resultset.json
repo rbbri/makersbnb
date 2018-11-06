@@ -1,11 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/spec/features/listing_spec.rb": [
+
         1,
         1,
         1,
         1,
+
         1,
         1,
         1,
@@ -16,7 +17,7 @@
         null,
         null
       ],
-      "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/spec/features/requests_spec.rb": [
+
         1,
         1,
         1,
@@ -25,8 +26,7 @@
         null,
         null
       ],
-      "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/spec/features/signin_signout_spec.rb": [
-        1,
+
         1,
         4,
         4,
@@ -57,27 +57,51 @@
         1,
         null,
         null
+
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
       ],
-      "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/spec/features/signup_spec.rb": [
+      "/Users/robin/Projects/makersbnb/spec/space_spec.rb": [
+        1,
+        null,
         1,
         1,
+        null,
+        1,
+        1,
+        1,
+        null,
         1,
         1,
         1,
         null,
         null,
+        null
+      ],
+      "/Users/robin/Projects/makersbnb/spec/user_spec.rb": [
         1,
         1,
+        null,
         1,
         1,
         1,
         null,
+        1,
+        1,
+        1,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
         null
       ],
@@ -88,6 +112,6 @@
         null
       ]
     },
-    "timestamp": 1541515595
+
   }
 }

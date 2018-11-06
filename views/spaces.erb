@@ -32,6 +32,7 @@
   <input type="submit" id="list_a_space" value="List a Space"></input>
 </form>
 
+
 <div class='spaces'>
   <% @spaces.each do |space|%>
     <a href="/spaces/<%= space.id %>">
@@ -41,3 +42,4 @@
     <p>£<%= space.price %></p>
   <% end %>
 <div>
+
