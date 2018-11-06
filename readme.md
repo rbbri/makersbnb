@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/rbbri/makersbnb.svg?branch=master)](https://travis-ci.com/rbbri/makersbnb)
+
 ## How to use ##
 
 - Fork this repo
