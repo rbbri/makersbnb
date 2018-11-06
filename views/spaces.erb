@@ -1,14 +1,10 @@
 <body>
   <link rel="stylesheet" href="/style.css">
   <div class='menu' align='right'>
-
-  <a href="/">
-  <img src='/images/makers_logo.png' class="logo" align="left"></img>
-  </a>
+    <a href="/">
+      <img src='/images/makers_logo.png' class="logo" align="left"></img>
+    </a>
     <ul>
-
-
-
       <li>
         <form class='active' action = '/spaces'>
           <input type="submit" value="Spaces">
@@ -32,9 +28,11 @@
 
 <h1> Book a space </h1>
 <form action="/spaces/new">
-<input type="submit" id="list_a_space" value="List a Space"></input>
+  <input type="submit" id="list_a_space" value="List a Space"></input>
 </form>
 
+<div class='spaces'>
 <% @spaces.each do |space|%>
-<%= space.name %>
+  <%= space.name %>
 <% end %>
+<div>

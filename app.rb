@@ -1,19 +1,17 @@
 require 'sinatra/base'
 require 'active_record'
 require_relative './models/user'
-
 require_relative './models/space'
-
 require 'pry'
 
-
 def db_configuration
-  db_configuration_file = "./db/config.yml"
-  YAML.load(File.read(db_configuration_file))
+  db_configuration_file = './db/config.yml'
+  YAML.safe_load(File.read(db_configuration_file), [], [], true)
 end
 
-ActiveRecord::Base.establish_connection(db_configuration["development"])
+ActiveRecord::Base.establish_connection(db_configuration['development'])
 
+# MakersBnB App
 class MakersBNB < Sinatra::Base
   use Rack::MethodOverride
   enable :sessions
@@ -63,8 +61,7 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/spaces' do
-    space = Space.create(name: params[:name])
-    redirect ('/spaces')
+    Space.create(name: params[:name])
+    redirect '/spaces'
   end
-
 end

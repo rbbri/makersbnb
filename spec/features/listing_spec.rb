@@ -5,6 +5,5 @@ feature 'listing a space' do
     fill_in 'name', with: 'Listing 1'
     click_button 'List my Space'
     expect(page).to have_content('Listing 1')
-
   end
 end
