@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 
+<% flash.keys.each do |type| %>
+  <div data-alert class="flash <%= type %> alert-box radius">
+    <%= flash[type] %>
+    <a href="#" class="close">&times;</a>
+  </div>
+<% end %>
+
+
 <body>
 <link rel="stylesheet" href="/style.css">
 <div class='menu' align='right'>
@@ -30,6 +38,10 @@
       <label for='username' align='left'>Username</label>
       <input type="text" id='username' name='username'>
     </p>
+
+    <div>
+      <%= flash[:error] %>
+    </div>
     <p>
       <label for='password' align='left'> Password </label>
       <input type="text" id='password' name='password'>

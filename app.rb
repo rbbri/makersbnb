@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'sinatra/flash'
 require 'active_record'
 require_relative './models/user'
 require_relative './models/space'
@@ -17,6 +18,7 @@ ActiveRecord::Base.establish_connection(db_configuration[ENV['ENVIRONMENT']])
 class MakersBNB < Sinatra::Base
   use Rack::MethodOverride
   enable :sessions
+  register Sinatra::Flash
 
   get '/' do
     @user = session[:user]
@@ -24,6 +26,14 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/users' do
+    if User.exists?(username: params[:username])
+      flash[:error] = 'This username is already in use'
+      redirect '/'
+    end
+    if User.exists?(email: params[:email])
+      flash[:error] = 'This email is already in use'
+      redirect '/'
+    end
     user = User.create(
       name: params[:name],
       username: params[:username],
