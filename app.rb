@@ -9,7 +9,9 @@ def db_configuration
   YAML.safe_load(File.read(db_configuration_file), [], [], true)
 end
 
-ActiveRecord::Base.establish_connection(db_configuration['development'])
+ENV['ENVIRONMENT'] ||= 'development'
+
+ActiveRecord::Base.establish_connection(db_configuration[ENV['ENVIRONMENT']])
 
 # MakersBnB App
 class MakersBNB < Sinatra::Base
@@ -61,7 +63,7 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.create(name: params[:name])
+    Space.create(name: params[:name], description: params[:description], price: params[:price], user_id: session[:user].id)
     redirect '/spaces'
   end
 
