@@ -60,15 +60,16 @@ class MakersBNB < Sinatra::Base
 
   post '/requests/new' do
     @user = session[:user]
+    @space = session[:space]
     dates = params[:in_date], params[:in_month], params[:in_year], params[:out_date], params[:out_month], params[:out_year]
-    request1 = Request.create(booking_date: dates, user_id: @user.id, space_id: session[:space])
+    request1 = Request.create(booking_date: dates, user_id: @user.id, space_id: @space.id)
     session[:tester] = request1
     redirect '/requests'
   end
 
   get '/requests' do
-    binding.pry
-    @request1 = session[:tester]
+    @booking_requests = Request.all
+
     erb :requests
   end
 

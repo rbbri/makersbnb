@@ -1,5 +1,5 @@
 class Space < ActiveRecord::Base
-  belongs_to :users, foreign_key: 'user_id'
+  belongs_to :user, foreign_key: 'user_id'
   has_many :requests
   validates :name, presence: true
   # validates :description, presence: true
