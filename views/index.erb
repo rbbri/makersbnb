@@ -8,8 +8,19 @@
 <img src='/images/makers_logo.png' class="logo" align="left"></img>
 </a>
   <ul>
-    <li><a href='/sessions/new'>Login</a></li>
-    <li><a href='/'>Logout</a></li>
+
+    <li>
+      <form action = '/sessions/new'>
+        <input type="submit" value="Login">
+      </form>
+    </li>
+
+    <li>
+      <form action = '/sessions' method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Logout">
+      </form>
+    </li>
   </ul>
 </div>
 

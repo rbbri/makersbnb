@@ -4,7 +4,7 @@ feature "signing in" do
   end
 
   scenario "signed up user signs out" do
-    click_link "Logout"
+    click_button "Logout"
     expect(page).to have_content "Sign up to MakersBnB"
     expect(page).not_to have_content "Welcome User One!"
   end

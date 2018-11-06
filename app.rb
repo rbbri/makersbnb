@@ -15,6 +15,7 @@ end
 ActiveRecord::Base.establish_connection(db_configuration["development"])
 
 class MakersBNB < Sinatra::Base
+  use Rack::MethodOverride
   enable :sessions
 
   get '/' do
@@ -33,8 +34,13 @@ class MakersBNB < Sinatra::Base
     redirect '/'
   end
 
-  get'/sessions/new' do
+  get '/sessions/new' do
     erb :login
+  end
+
+  delete '/sessions' do
+    session[:user] = nil
+    redirect '/'
   end
 
   get '/spaces' do
