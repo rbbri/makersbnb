@@ -52,10 +52,10 @@ class MakersBNB < Sinatra::Base
 
   get '/spaces/:id' do
     Space.find(params[:id])
+  end
 
   get '/requests' do
     erb :requests
-
   end
 
 end
