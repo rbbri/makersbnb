@@ -5,4 +5,7 @@ rvm:
  - jruby
 
  script:
-bundle exec rake db:auto_migrate RACK_ENV=test
+ - bundle install
+ - db:create
+ - db:auto_migrate
+ - db:test:prepare
