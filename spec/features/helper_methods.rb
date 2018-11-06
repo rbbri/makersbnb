@@ -7,6 +7,15 @@ def signup1
   click_button 'Sign Up'
 end
 
+def signup2
+  visit '/'
+  fill_in(:username, with: 'user2')
+  fill_in(:password, with: 'password2')
+  fill_in(:name, with: 'User Two')
+  fill_in(:email, with: 'user2@example.com')
+  click_button 'Sign Up'
+end
+
 def signup_duplicate_user
   visit '/'
   fill_in(:username, with: 'user1')

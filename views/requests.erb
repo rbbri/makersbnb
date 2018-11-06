@@ -21,7 +21,6 @@
   <tr>
     <td><% @booking_requests.each do |request| %>
       <%= request.space.name %>
-      <%= request.space.user %>
       <%= request.booking_date %>
     <% end %>
     </td>

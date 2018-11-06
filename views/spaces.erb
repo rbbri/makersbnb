@@ -36,10 +36,9 @@
 <div class='spaces'>
   <% @spaces.each do |space|%>
     <a href="/spaces/<%= space.id %>">
-      <p name="name"><%= space.name %><span id="id"><%= space.id %></span></p>
+      <p name="name"><%= space.name %></p>
     </a>
     <p><%= space.description %></p>
     <p>£<%= space.price %></p>
   <% end %>
 <div>
-

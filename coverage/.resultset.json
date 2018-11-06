@@ -1,12 +1,26 @@
 {
   "RSpec": {
     "coverage": {
-
+      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/dates_spec.rb": [
         1,
         1,
         1,
         1,
-
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/listing_spec.rb": [
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -17,7 +31,7 @@
         null,
         null
       ],
-
+      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/requests_spec.rb": [
         1,
         1,
         1,
@@ -26,7 +40,8 @@
         null,
         null
       ],
-
+      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/signin_signout_spec.rb": [
+        1,
         1,
         4,
         4,
@@ -57,7 +72,11 @@
         1,
         null,
         null
-
+      ],
+      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/signup_spec.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         null,
@@ -67,30 +86,17 @@
         1,
         1,
         1,
-        1,
-        1,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
-      "/Users/robin/Projects/makersbnb/spec/space_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/robin/Projects/makersbnb/spec/user_spec.rb": [
+      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/request_spec.rb": [
         1,
         1,
         null,
@@ -105,13 +111,41 @@
         null,
         null
       ],
-      "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/spec/space_spec.rb": [
+      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/space_spec.rb": [
         1,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/user_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ]
     },
-
+    "timestamp": 1541522346
   }
 }
