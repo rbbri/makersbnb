@@ -45,32 +45,32 @@ class MakersBNB < Sinatra::Base
     redirect '/spaces'
   end
 
-  post '/sessions' do
-    user = User.find_by(
-      username: params[:username],
-      password: params[:password]
-    )
-    if user.nil?
-      flash[:error] = "Incorrect username or password"
-      redirect '/sessions/new'
-    end
-    session[:user] = user
-    redirect '/spaces'
+  get '/spaces' do
+    @user = session[:user]
+    @spaces = Space.all
+    erb :spaces
   end
 
   get '/sessions/new' do
     erb :login
   end
 
+  post '/sessions' do
+    user = User.find_by(
+      username: params[:username],
+      password: params[:password]
+    )
+    if user.nil?
+      flash[:error] = 'Incorrect username or password'
+      redirect '/sessions/new'
+    end
+    session[:user] = user
+    redirect '/spaces'
+  end
+
   delete '/sessions' do
     session[:user] = nil
     redirect '/'
-  end
-
-  get '/spaces' do
-    @user = session[:user]
-    @spaces = Space.all
-    erb :spaces
   end
 
   get '/spaces/new' do
@@ -88,25 +88,30 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces/:id' do
-    Space.find(params[:id])
     @space = Space.find(params[:id])
-    session[:space] = @space
-    erb :spaces_id
+    erb :space_id
   end
 
-  post '/requests/new' do
+  post '/requests' do
     @user = session[:user]
-    @space = session[:space]
-    dates = params[:in_date], params[:in_month], params[:in_year], params[:out_date], params[:out_month], params[:out_year]
-    request1 = Request.create(booking_date: dates, user_id: @user.id, space_id: @space.id)
-    session[:tester] = request1
+    dates = [
+      params[:in_date],
+      params[:in_month],
+      params[:in_year],
+      params[:out_date],
+      params[:out_month],
+      params[:out_year]
+    ]
+    Request.create(
+      booking_date: dates,
+      user_id: @user.id,
+      space_id: params[:id]
+    )
     redirect '/requests'
   end
 
   get '/requests' do
     @booking_requests = Request.all
-
     erb :requests
   end
-
 end

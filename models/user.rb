@@ -1,3 +1,4 @@
+# User model
 class User < ActiveRecord::Base
   has_many :spaces
   has_many :requests
