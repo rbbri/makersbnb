@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Imogen/Projects/week6/makersbnb/spec/features/dates_spec.rb": [
+      "/Users/robin/Projects/makersbnb/spec/features/dates_spec.rb": [
         1,
         1,
         1,
@@ -11,7 +11,7 @@
         null,
         null
       ],
-      "/Users/Imogen/Projects/week6/makersbnb/spec/features/listing_spec.rb": [
+      "/Users/robin/Projects/makersbnb/spec/features/listing_spec.rb": [
         1,
         1,
         1,
@@ -23,7 +23,7 @@
         null,
         null
       ],
-      "/Users/Imogen/Projects/week6/makersbnb/spec/features/requests_spec.rb": [
+      "/Users/robin/Projects/makersbnb/spec/features/requests_spec.rb": [
         1,
         1,
         1,
@@ -32,7 +32,7 @@
         null,
         null
       ],
-      "/Users/Imogen/Projects/week6/makersbnb/spec/features/signup_spec.rb": [
+      "/Users/robin/Projects/makersbnb/spec/features/signup_spec.rb": [
         1,
         null,
         1,
@@ -48,14 +48,54 @@
         null,
         null
       ],
-      "/Users/Imogen/Projects/week6/makersbnb/spec/space_spec.rb": [
+      "/Users/robin/Projects/makersbnb/spec/request_spec.rb": [
+        1,
         1,
         null,
         1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/robin/Projects/makersbnb/spec/space_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/robin/Projects/makersbnb/spec/user_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ]
     },
-    "timestamp": 1541519670
+    "timestamp": 1541520820
   }
 }

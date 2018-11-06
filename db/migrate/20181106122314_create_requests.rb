@@ -6,8 +6,8 @@ class CreateRequests < ActiveRecord::Migration[5.2]
       table.timestamp :date_created
       table.string :booking_date
       table.string :confirmation_status, :default => 'Awaiting confirmation'
-      table.references :users
-      table.references :spaces
+      table.references :user
+      table.references :space
     end
   end
 end
