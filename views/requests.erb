@@ -1,28 +1,31 @@
 <body>
   <link rel="stylesheet" href="/style.css">
-  <div class='menu' align='right'>
-    <a href="/">
-      <img src='/images/makers_logo.png' class="logo" align="left"></img>
-    </a>
-    <ul>
-      <li>
-        <form action = '/spaces'>
-          <input type="submit" value="Spaces">
-        </form>
-      </li>
-      <li>
-        <form class='active' action = '/requests'>
-          <input type="submit" value="Requests">
-        </form>
-      </li>
-      <li>
-        <form action = '/sessions' method="post">
-          <input type="hidden" name="_method" value="delete">
-          <input type="submit" value="Logout">
-        </form>
-      </li>
-    </ul>
-  </div>
+
+<div class='menu' align='right'>
+
+<a href="/">
+<img src='/images/makers_logo.png' class="logo" align="left"></img>
+</a>
+  <ul>
+    <li>
+      <form action = '/spaces'>
+        <input type="submit" value="Spaces">
+      </form>
+    </li>
+    <li>
+      <form class='active' action = '/requests'>
+        <input type="submit" value="Requests">
+      </form>
+    </li>
+    <li>
+      <form action = '/sessions' method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Logout">
+      </form>
+    </li>
+  </ul>
+</div>
+
 
 <h1>Requests</h1>
 <table>
@@ -31,12 +34,16 @@
     <th>Requests I've received</th>
   </tr>
   <tr>
-    <td><% @booking_requests.each do |request| %>
+    <td id="requests_made"><% @requests_made.each do |request| %>
       <%= request.space.name %>
       <%= request.booking_date %>
     <% end %>
     </td>
-    <td></td>
+    <td id="requests_received"><% @requests_received.each do |request| %>
+      <%= request.space.name %>
+      <%= request.booking_date %>
+    <% end %>
+    </td>
   </tr>
 </table>
 

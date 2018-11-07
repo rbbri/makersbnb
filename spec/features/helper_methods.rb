@@ -45,6 +45,39 @@ def signin1
   click_button 'log_in'
 end
 
+
+def signin2
+  click_button 'Login'
+  fill_in(:username, with: 'user2')
+  fill_in(:password, with: 'password2')
+  click_button 'log_in'
+end
+
+def list_cornwall
+  click_button 'List a Space'
+  fill_in(:name, with: 'Cornwall')
+  fill_in(:description, with: 'This is a beautiful house in Cornwall')
+  fill_in(:price, with: '100')
+  click_button 'List my Space'
+end
+
+def list_devon
+  click_button 'List a Space'
+  fill_in(:name, with: 'Devon')
+  fill_in(:description, with: 'This is a beautiful house in Devon')
+  fill_in(:price, with: '100')
+  click_button 'List my Space'
+end
+
+def request_cornwall
+  click_link 'Cornwall'
+  click_button 'Request to Book'
+end
+
+def request_devon
+  click_link 'Devon'
+  click_button 'Request to Book'
+
 def list_space
   click_button 'List a Space'
   fill_in 'name', with: 'Listing 1'
@@ -67,4 +100,5 @@ def request
   fill_in 'out_month', with: 'December'
   fill_in 'out_year', with: '2018'
   click_button('Request to Book')
+
 end
