@@ -17,6 +17,8 @@ feature "confirming a space" do
   scenario "an owner confirms a space" do
     within('div#request_received_Devon') do
       click_button 'Confirm'
+    end
+    within('div#request_received_Devon') do
       expect(page).not_to have_selector(:button, 'Confirm')
       expect(page).not_to have_selector(:button, 'Reject')
       expect(page).to have_content 'Confirmed'
