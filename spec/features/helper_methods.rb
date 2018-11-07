@@ -45,6 +45,13 @@ def signin1
   click_button 'log_in'
 end
 
+def signin2
+  click_button 'Login'
+  fill_in(:username, with: 'user2')
+  fill_in(:password, with: 'password2')
+  click_button 'log_in'
+end
+
 def list_cornwall
   click_button 'List a Space'
   fill_in(:name, with: 'Cornwall')

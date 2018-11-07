@@ -32,12 +32,16 @@
     <th>Requests I've received</th>
   </tr>
   <tr>
-    <td><% @requests_made.each do |request| %>
+    <td id="requests_made"><% @requests_made.each do |request| %>
       <%= request.space.name %>
       <%= request.booking_date %>
     <% end %>
     </td>
-    <td></td>
+    <td id="requests_received"><% @requests_received.each do |request| %>
+      <%= request.space.name %>
+      <%= request.booking_date %>
+    <% end %>
+    </td>
   </tr>
 </table>
 

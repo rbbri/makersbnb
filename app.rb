@@ -21,8 +21,11 @@ class MakersBNB < Sinatra::Base
   enable :sessions
   register Sinatra::Flash
 
-  get '/' do
+  before do
     @user = session[:user]
+  end
+
+  get '/' do
     erb :index
   end
 
@@ -46,7 +49,6 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces' do
-    @user = session[:user]
     @spaces = Space.all
     erb :spaces
   end
@@ -78,7 +80,6 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/spaces' do
-    @user = session[:user]
     @user.spaces.create(
       name: params[:name],
       description: params[:description],
@@ -93,7 +94,6 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/requests' do
-    @user = session[:user]
     dates = [
       params[:in_date],
       params[:in_month],
@@ -106,18 +106,13 @@ class MakersBNB < Sinatra::Base
       booking_date: dates.join(' '),
       space_id: params[:id]
     )
-    # Request.create(
-    #   booking_date: dates.join(' '),
-    #   user_id: @user.id,
-    #   space_id: params[:id]
-    # )
     redirect '/requests'
   end
 
   get '/requests' do
-    @user = session[:user]
+    user_space_requests = @user.spaces.map { |space| space.requests }
+    @requests_received = user_space_requests.flatten
     @requests_made = @user.requests
-    # @requests_received
     erb :requests
   end
 end
