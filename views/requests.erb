@@ -46,7 +46,8 @@
         <%= request.space.name %>
         <%= request.booking_date %>
         <form id="confirm_deny" action="/requests/<%= request.id %>" method="post">
-          <input type="submit" value="Confirm" name="Confirm">
+          <button type="submit" value="Confirmed" name="status">Confirm</button>
+          <button type="submit" value="Rejected" name="status">Reject</button>
         </form>
       </div>
     <% end %>

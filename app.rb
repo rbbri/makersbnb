@@ -118,7 +118,8 @@ class MakersBNB < Sinatra::Base
 
   post '/requests/:id' do
     request = Request.find(params[:id])
-    request.update(confirmation_status: "Confirmed")
+    p params
+    request.update(confirmation_status: params[:status])
     redirect '/requests'
   end
 end
