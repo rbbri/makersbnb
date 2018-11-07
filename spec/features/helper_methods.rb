@@ -14,6 +14,14 @@ def signup2
   click_button 'Sign Up'
 end
 
+def signup3
+  fill_in(:username, with: 'user3')
+  fill_in(:password, with: 'password3')
+  fill_in(:name, with: 'User Three')
+  fill_in(:email, with: 'user3@example.com')
+  click_button 'Sign Up'
+end
+
 def signup_duplicate_user
   fill_in(:username, with: 'user1')
   fill_in(:password, with: 'password1')
@@ -35,4 +43,28 @@ def signin1
   fill_in(:username, with: 'user1')
   fill_in(:password, with: 'password1')
   click_button 'log_in'
+end
+
+def list_space
+  click_button 'List a Space'
+  fill_in 'name', with: 'Listing 1'
+  fill_in 'description', with: 'Description 1'
+  fill_in 'price', with: '1'
+  fill_in 'in_date', with: '1'
+  fill_in 'in_month', with: 'December'
+  fill_in 'in_year', with: '2018'
+  fill_in 'out_date', with: '20'
+  fill_in 'out_month', with: 'December'
+  fill_in 'out_year', with: '2018'
+  click_button 'List my Space'
+end
+
+def request
+  fill_in 'in_date', with: '1'
+  fill_in 'in_month', with: 'December'
+  fill_in 'in_year', with: '2018'
+  fill_in 'out_date', with: '2'
+  fill_in 'out_month', with: 'December'
+  fill_in 'out_year', with: '2018'
+  click_button('Request to Book')
 end
