@@ -45,10 +45,12 @@
       <div id="request_received_<%= request.space.name %>">
         <%= request.space.name %>
         <%= request.booking_date %>
-        <form id="confirm_deny" action="/requests/<%= request.id %>" method="post">
-          <button type="submit" value="Confirmed" name="status">Confirm</button>
-          <button type="submit" value="Rejected" name="status">Reject</button>
-        </form>
+        <% if @clicked_id != request.id %>
+          <form id="confirm_deny" action="/requests/<%= request.id %>" method="post">
+            <button type="submit" value="Confirmed" name="status">Confirm</button>
+            <button type="submit" value="Rejected" name="status">Reject</button>
+          </form>
+        <% end %>
       </div>
     <% end %>
     </td>
