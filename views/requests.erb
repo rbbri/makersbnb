@@ -45,13 +45,13 @@
       <div id="request_received_<%= request.space.name %>">
         <%= request.space.name %>
         <%= request.booking_date %>
-        <% if @clicked_id == request.id.to_s %>
-          <p><%= @status %></p>
-        <% else %>
+        <% if request.confirmation_status == 'Awaiting confirmation' %>
           <form id="confirm_deny" action="/requests/<%= request.id %>" method="post">
             <button type="submit" value="Confirmed" name="status">Confirm</button>
             <button type="submit" value="Rejected" name="status">Reject</button>
           </form>
+        <% else %>
+          <%= request.confirmation_status %>
         <% end %>
       </div>
     <% end %>

@@ -113,14 +113,10 @@ class MakersBNB < Sinatra::Base
     user_space_requests = @user.spaces.map { |space| space.requests }
     @requests_received = user_space_requests.flatten
     @requests_made = @user.requests
-    @clicked_id = session[:clicked_id]
-    @status = session[:status]
     erb :requests
   end
 
   post '/requests/:id' do
-    session[:clicked_id] = params[:id]
-    session[:status] = params[:status]
     request = Request.find(params[:id])
     request.update(confirmation_status: params[:status])
     redirect '/requests'
