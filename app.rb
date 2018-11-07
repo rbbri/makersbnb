@@ -115,7 +115,9 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/requests' do
-    @booking_requests = Request.all
+    @user = session[:user]
+    @requests_made = @user.requests
+    # @requests_received
     erb :requests
   end
 end

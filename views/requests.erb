@@ -32,7 +32,7 @@
     <th>Requests I've received</th>
   </tr>
   <tr>
-    <td><% @booking_requests.each do |request| %>
+    <td><% @requests_made.each do |request| %>
       <%= request.space.name %>
       <%= request.booking_date %>
     <% end %>
