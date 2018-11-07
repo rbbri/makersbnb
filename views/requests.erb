@@ -46,7 +46,7 @@
         <%= request.space.name %>
         <%= request.booking_date %>
         <% if @clicked_id == request.id.to_s %>
-          <p>Confirmed!</p>
+          <p><%= @status %></p>
         <% else %>
           <form id="confirm_deny" action="/requests/<%= request.id %>" method="post">
             <button type="submit" value="Confirmed" name="status">Confirm</button>

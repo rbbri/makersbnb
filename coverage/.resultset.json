@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/spec/features/confirmation_status_spec.rb": [
+      "/Users/Imogen/Projects/week6/makersbnb/spec/features/confirmation_status_spec.rb": [
         1,
         1,
         2,
@@ -34,6 +34,11 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        1,
         1,
         1,
         1,
@@ -51,6 +56,6 @@
         null
       ]
     },
-    "timestamp": 1541603255
+    "timestamp": 1541603385
   }
 }
