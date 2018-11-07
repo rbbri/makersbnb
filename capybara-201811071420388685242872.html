@@ -33,23 +33,15 @@
     <th>Requests I've received</th>
   </tr>
   <tr>
-    <td id="requests_made"><% @requests_made.each do |request| %>
-      <div id="request_made_<%= request.space.name %>">
-        <%= request.space.name %>
-        <%= request.booking_date %>
-        <%= request.confirmation_status %>
-      </div>
-    <% end %>
-    </td>
-    <td id="requests_received"><% @requests_received.each do |request| %>
-      <div id="request_received_<%= request.space.name %>">
-        <%= request.space.name %>
-        <%= request.booking_date %>
-        <form id="confirm_deny" action="/requests/<%= request.id %>" method="post">
+    <td id="requests_made">    </td>
+    <td id="requests_received">
+      <div id="request_received_Devon">
+        Devon
+        1 January 2018 1 January 2018
+        <form id="confirm_deny" action="/requests/1" method="post">
           <input type="submit" value="Confirm" name="Confirm">
         </form>
       </div>
-    <% end %>
     </td>
   </tr>
 </table>

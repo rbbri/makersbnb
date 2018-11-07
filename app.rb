@@ -115,4 +115,10 @@ class MakersBNB < Sinatra::Base
     @requests_made = @user.requests
     erb :requests
   end
+
+  post '/requests/:id' do
+    request = Request.find(params[:id])
+    request.update(confirmation_status: "Confirmed")
+    redirect '/requests'
+  end
 end
