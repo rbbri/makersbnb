@@ -77,6 +77,7 @@ end
 def request_devon
   click_link 'Devon'
   click_button 'Request to Book'
+end
 
 def list_space
   click_button 'List a Space'
@@ -100,5 +101,4 @@ def request
   fill_in 'out_month', with: 'December'
   fill_in 'out_year', with: '2018'
   click_button('Request to Book')
-
 end
