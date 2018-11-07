@@ -4,12 +4,13 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-group :test do
+group :test, :development, :production do
   gem 'capybara'
+  gem 'coveralls', require: false
   gem 'database_cleaner'
   gem 'launchy'
-  gem 'rubocop'
   gem 'rspec'
+  gem 'rubocop'
   gem 'simplecov'
   gem 'simplecov-console'
 end

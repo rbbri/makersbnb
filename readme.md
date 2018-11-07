@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.com/rbbri/makersbnb.svg?branch=master)](https://travis-ci.com/rbbri/makersbnb)
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/rbbri/makersbnb.svg?columns=all)](https://waffle.io/rbbri/makersbnb)
+[![Coverage Status](https://coveralls.io/repos/github/rbbri/makersbnb/badge.svg?branch=master)](https://coveralls.io/github/rbbri/makersbnb?branch=master)
 
 ## How to use ##
 
