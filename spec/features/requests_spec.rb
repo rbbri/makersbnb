@@ -22,6 +22,4 @@ feature 'requesting a space' do
       expect(page).not_to have_content 'Devon'
     end
   end
-
-
 end
