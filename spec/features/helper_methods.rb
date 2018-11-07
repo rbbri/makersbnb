@@ -51,7 +51,6 @@ def list_cornwall
   fill_in(:description, with: 'This is a beautiful house in Cornwall')
   fill_in(:price, with: '100')
   click_button 'List my Space'
-  save_and_open_page
 end
 
 def list_devon

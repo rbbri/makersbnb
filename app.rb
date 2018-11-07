@@ -78,11 +78,11 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.create(
+    @user = session[:user]
+    @user.spaces.create(
       name: params[:name],
       description: params[:description],
-      price: params[:price],
-      user_id: session[:user].id
+      price: params[:price]
     )
     redirect '/spaces'
   end
@@ -102,11 +102,15 @@ class MakersBNB < Sinatra::Base
       params[:out_month],
       params[:out_year]
     ]
-    Request.create(
+    @user.requests.create(
       booking_date: dates.join(' '),
-      user_id: @user.id,
       space_id: params[:id]
     )
+    # Request.create(
+    #   booking_date: dates.join(' '),
+    #   user_id: @user.id,
+    #   space_id: params[:id]
+    # )
     redirect '/requests'
   end
 
