@@ -29,7 +29,8 @@ ActiveRecord::Schema.define(version: 2018_11_07_143442) do
     t.bigint "user_id"
     t.bigint "space_id"
     t.datetime "date_created"
-    t.string "booking_date"
+    t.date "start_date"
+    t.date "end_date"
     t.string "confirmation_status", default: "Awaiting confirmation"
     t.index ["space_id"], name: "index_requests_on_space_id"
     t.index ["user_id"], name: "index_requests_on_user_id"
@@ -39,7 +40,8 @@ ActiveRecord::Schema.define(version: 2018_11_07_143442) do
     t.string "name"
     t.string "description"
     t.integer "price"
-    t.integer "user_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_spaces_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

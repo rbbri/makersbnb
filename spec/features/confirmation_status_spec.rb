@@ -6,6 +6,7 @@ feature "confirming a space" do
     click_button 'Logout'
     signup2
     request_devon
+    save_and_open_page
     within('div#request_made_Devon') do
       expect(page).to have_content "Awaiting confirmation"
     end
