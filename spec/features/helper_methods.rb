@@ -45,6 +45,7 @@ def signin1
   click_button 'log_in'
 end
 
+
 def signin2
   click_button 'Login'
   fill_in(:username, with: 'user2')
@@ -76,4 +77,28 @@ end
 def request_devon
   click_link 'Devon'
   click_button 'Request to Book'
+
+def list_space
+  click_button 'List a Space'
+  fill_in 'name', with: 'Listing 1'
+  fill_in 'description', with: 'Description 1'
+  fill_in 'price', with: '1'
+  fill_in 'in_date', with: '1'
+  fill_in 'in_month', with: 'December'
+  fill_in 'in_year', with: '2018'
+  fill_in 'out_date', with: '20'
+  fill_in 'out_month', with: 'December'
+  fill_in 'out_year', with: '2018'
+  click_button 'List my Space'
+end
+
+def request
+  fill_in 'in_date', with: '1'
+  fill_in 'in_month', with: 'December'
+  fill_in 'in_year', with: '2018'
+  fill_in 'out_date', with: '2'
+  fill_in 'out_month', with: 'December'
+  fill_in 'out_year', with: '2018'
+  click_button('Request to Book')
+
 end
