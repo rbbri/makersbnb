@@ -47,20 +47,27 @@ end
 
 def list_cornwall
   click_button 'List a Space'
-  fill_in(:name, with: 'Beautiful house in Cornwall')
+  fill_in(:name, with: 'Cornwall')
   fill_in(:description, with: 'This is a beautiful house in Cornwall')
   fill_in(:price, with: '100')
   click_button 'List my Space'
+  save_and_open_page
 end
 
 def list_devon
   click_button 'List a Space'
-  fill_in(:name, with: 'Beautiful house in Devon')
+  fill_in(:name, with: 'Devon')
   fill_in(:description, with: 'This is a beautiful house in Devon')
   fill_in(:price, with: '100')
   click_button 'List my Space'
 end
 
 def request_cornwall
+  click_link 'Cornwall'
+  click_button 'Request to Book'
+end
 
+def request_devon
+  click_link 'Devon'
+  click_button 'Request to Book'
 end
