@@ -6,6 +6,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 group :test do
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'launchy'
   gem 'rubocop'
   gem 'rspec'
@@ -13,16 +14,15 @@ group :test do
   gem 'simplecov-console'
 end
 
-group :development do
+group :development, :production do
   gem 'activerecord'
+  gem 'pg'
   gem 'rack'
   gem 'rake'
 end
 
-gem 'database_cleaner'
 gem 'flog'
 gem 'json', '~> 1.6'
-gem 'pg'
 gem 'pry'
 gem 'sinatra'
 gem 'sinatra-flash'
