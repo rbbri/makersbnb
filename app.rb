@@ -94,16 +94,11 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/requests' do
-    dates = [
-      params[:in_date],
-      params[:in_month],
-      params[:in_year],
-      params[:out_date],
-      params[:out_month],
-      params[:out_year]
-    ]
+    start_date = "#{params[:in_year]}-#{params[:in_month]}-#{params[:in_date]}"
+    end_date = "#{params[:out_year]}-#{params[:out_month]}-#{params[:out_date]}"
     @user.requests.create(
-      booking_date: dates.join(' '),
+      start_date: start_date,
+      end_date: end_date,
       space_id: params[:id]
     )
     redirect '/requests'
@@ -119,6 +114,14 @@ class MakersBNB < Sinatra::Base
   post '/requests/:id' do
     request = Request.find(params[:id])
     request.update(confirmation_status: params[:status])
+    space = Space.find(request.space_id)
+    if params[:status] == "Confirmed"
+      space.bookings.create(
+        request_id: request.id,
+        start_date: request.start_date,
+        end_date: request.end_date
+      )
+    end
     redirect '/requests'
   end
 end
