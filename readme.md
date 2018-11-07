@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/rbbri/makersbnb.svg?branch=master)](https://travis-ci.com/rbbri/makersbnb)
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/rbbri/makersbnb.svg?columns=all)](https://waffle.io/rbbri/makersbnb)
 
 ## How to use ##
 
