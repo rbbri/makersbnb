@@ -1,3 +1,11 @@
-script:
 
-bundle exec rake db:auto_migrate RACK_ENV=test
+language: ruby
+rvm:
+ - 2.5.1
+
+script:
+ - bundle install
+ - bundle exec rake db:create
+ - bundle exec rake db:migrate
+ - bundle exec rake db:test:prepare
+ - bundle exec rake spec

@@ -4,23 +4,27 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-group :test do
+group :test, :development, :production do
   gem 'capybara'
+  gem 'coveralls', require: false
+  gem 'database_cleaner'
   gem 'launchy'
   gem 'rspec'
+  gem 'rubocop'
   gem 'simplecov'
   gem 'simplecov-console'
 end
 
-gem 'activerecord'
-gem 'database_cleaner'
+group :development, :production do
+  gem 'activerecord'
+  gem 'pg'
+  gem 'rack'
+  gem 'rake'
+end
+
 gem 'flog'
 gem 'json', '~> 1.6'
-gem 'pg'
 gem 'pry'
-gem 'rack'
-gem 'rake'
-gem 'rubocop'
 gem 'sinatra'
 gem 'sinatra-flash'
 gem 'standalone_migrations'

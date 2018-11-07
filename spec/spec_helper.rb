@@ -1,6 +1,7 @@
 ENV['ENVIRONMENT'] = 'test'
 require 'capybara'
 require 'capybara/rspec'
+require 'coveralls'
 require 'rspec'
 require_relative './features/helper_methods'
 require_relative './../app'
@@ -8,6 +9,7 @@ require 'simplecov'
 require 'simplecov-console'
 require 'database_cleaner'
 
+Coveralls.wear!
 Capybara.app = MakersBNB
 
 SimpleCov.formatter = SimpleCov::Formatter::Console
