@@ -2,6 +2,7 @@
 
   body {
       font: normal 15px Verdana, sans-serif;
+      background-color: #dae1e8;
   }
 
   .sign_up_form {
@@ -64,32 +65,35 @@ ul {
   height: -webkit-fill-available;
   width: 100;
   border: none;
-  font-size: 20;
+  font-size: 15;
   height: 80px;
   background-color: #808080;
   color: white;
-  border-width: thin;
   border-left: solid;
+  border-width: thin;
 }
 #r_button {
   height: -webkit-fill-available;
   width: 100;
   border: none;
-  font-size: 20;
+  font-size: 15;
   height: 80px;
   background-color: #808080;
   color: white;
-  border-width: thin;
   border-left: solid;
+  border-width: thin;
 }
+
 #l_button {
   height: -webkit-fill-available;
   width: 100;
   border: none;
-  font-size: 20;
+  font-size: 15;
   height: 80px;
   background-color: #808080;
   color: white;
+  border-left: solid;
+  border-width: thin;
 }
 
 li {
