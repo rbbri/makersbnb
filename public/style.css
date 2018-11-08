@@ -19,6 +19,13 @@
 
 }
 
+.sign_up_form label {
+  width: 100%;
+  clear: both;
+  align: left;
+
+}
+
 .log_in_form {
 width: 400px;
 margin: auto;
