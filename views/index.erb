@@ -1,19 +1,6 @@
 <body>
 <link rel="stylesheet" href="/style.css">
 
-<div class='menu' align='right'>
-<a href="/">
-  <img src='/images/makers_logo.png' class="logo" align="left"></img>
-</a>
-<ul>
-  <li>
-    <form action = '/sessions/new'>
-      <input type="submit" value="Login">
-    </form>
-  </li>
-</ul>
-</div>
-
 <% if @user.nil? %>
   <div class='sign_up_form' align='center'>
   <form id='sign_up' action='/users' method='post'>

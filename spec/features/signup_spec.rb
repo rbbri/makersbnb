@@ -10,14 +10,14 @@ feature 'signing-up' do
   end
 
   scenario 'a user signs up with a pre existing username' do
-    click_button 'Logout'
+    click_button 'LOGOUT'
     signup_duplicate_user
     expect(page).to have_content 'This username is already in use'
     expect(page).not_to have_content 'Welcome User One!'
   end
 
   scenario 'a user signs up with a pre existing email' do
-    click_button 'Logout'
+    click_button 'LOGOUT'
     signup_duplicate_email
     expect(page).to have_content 'This email is already in use'
     expect(page).not_to have_content 'Welcome User One!'
