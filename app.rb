@@ -27,7 +27,7 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/' do
-    erb :index
+    erb :index, :layout => :welcome_header
   end
 
   post '/users' do
@@ -51,11 +51,11 @@ class MakersBNB < Sinatra::Base
 
   get '/spaces' do
     @spaces = Space.all
-    erb :spaces
+    erb :spaces, :layout => :logged_in_header
   end
 
   get '/sessions/new' do
-    erb :login
+    erb :login, :layout => :welcome_header
   end
 
   post '/sessions' do
@@ -77,7 +77,7 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces/new' do
-    erb :new_space
+    erb :new_space, :layout => :logged_in_header
   end
 
   post '/spaces' do
@@ -91,7 +91,7 @@ class MakersBNB < Sinatra::Base
 
   get '/spaces/:id' do
     @space = Space.find(params[:id])
-    erb :space_id
+    erb :space_id, :layout => :logged_in_header
   end
 
   post '/requests' do
@@ -109,7 +109,7 @@ class MakersBNB < Sinatra::Base
     user_space_requests = @user.spaces.map { |space| space.requests }
     @requests_received = user_space_requests.flatten
     @requests_made = @user.requests
-    erb :requests
+    erb :requests, :layout => :logged_in_header
   end
 
   post '/requests/:id' do
