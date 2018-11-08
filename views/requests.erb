@@ -1,6 +1,9 @@
+<body>
 
-<h1>Requests</h1>
-<table>
+<div class='requests'>
+
+<table id='requests_table'>
+  <h1>Requests</h1>
   <tr>
     <th>Requests I've made</th>
     <th>Requests I've received</th>
@@ -13,7 +16,13 @@
         <%= request.nights %>
         <%= request.confirmation_status %>
       </div>
+
     <% end %>
+    <div class='no_request'>
+    <% if @request_made.nil? %>
+    No current requests made
+    <% end %>
+    </div>
     </td>
     <td id="requests_received"><% @requests_received.each do |request| %>
       <div id="request_received_<%= request.space.name %>">
@@ -28,10 +37,16 @@
         <% else %>
           <%= request.confirmation_status %>
         <% end %>
-      </div>
     <% end %>
+    <% if @request_received.nil? %>
+    <div class='no_request'>
+    No current requests received
+    <% end %>
+    </div>
+      </div>
     </td>
   </tr>
 </table>
+</div>
 
 </body>

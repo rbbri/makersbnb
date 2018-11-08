@@ -1,5 +1,5 @@
   body {
-      font: normal 15px Verdana, sans-serif;
+      font: normal 15px verdana, sans-serif;
       background-color: white;
   }
 
@@ -151,6 +151,49 @@ li a:hover {
   border-color: slategray;
 }
 
+#request_made {
+  background-color: #dae1e8;
+  width: 60%;
+  border: double;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  border-color: slategray;
+}
+
+#request_received {
+  background-color: #dae1e8;
+  width: 60%;
+  border: double;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  border-color: slategray;
+}
+
 #sign_up_table {
   padding: 15px;
+}
+
+#requests_table {
+  padding: 15px;
+  width: 80%;
+  clear: both;
+  margin: 0 auto;
+  border-style: solid;
+}
+
+#requests_table th {
+  padding: 15px;
+  clear: both;
+  align: center;
+  border-style: solid;
+}
+
+.requests {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.no_request {
+  padding: 30px;
+  text-align: center;
 }
