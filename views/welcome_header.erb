@@ -1,0 +1,22 @@
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class='menu' align='right'>
+  <a href="/">
+    <img src='/images/makers_logo.png' class="logo" align="left"></img>
+  </a>
+  <ul>
+    <li>
+      <form id="login_button" action = '/sessions/new'>
+        <input id="li_button" class='active' type="submit" value="LOGIN">
+      </form>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <%= yield  %>
+</div>
+</body>

@@ -1,28 +1,5 @@
-<body>
+<body align= "center">
   <link rel="stylesheet" href="/style.css">
-  <div class='menu' align='right'>
-    <a href="/">
-      <img src='/images/makers_logo.png' class="logo" align="left"></img>
-    </a>
-    <ul>
-      <li>
-        <form class='active' action = '/spaces'>
-          <input type="submit" value="Spaces">
-        </form>
-      </li>
-      <li>
-        <form action = '/requests'>
-          <input type="submit" value="Requests">
-        </form>
-      </li>
-      <li>
-        <form action = '/sessions' method="post">
-          <input type="hidden" name="_method" value="delete">
-          <input type="submit" value="Logout">
-        </form>
-      </li>
-    </ul>
-  </div>
 
 <h2>Welcome <%= @user.name %>!</h2>
 
@@ -32,10 +9,12 @@
 </form>
 
 
-<div class='spaces'>
+<div align= "center" class='spaces'>
   <% @spaces.each do |space|%>
+    <div id="space">
     <a href="/spaces/<%= space.id %>"><%= space.name %></a>
     <p><%= space.description %></p>
     <p>£<%= space.price %></p>
+    </div>
   <% end %>
 <div>
