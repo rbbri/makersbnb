@@ -2,7 +2,7 @@ feature 'signing in' do
   before do
     visit '/'
     signup1
-    click_button 'Logout'
+    click_button 'LOGOUT'
   end
   scenario 'signed up user signs out and signs back in' do
     signin1
