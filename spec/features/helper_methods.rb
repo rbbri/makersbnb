@@ -39,7 +39,7 @@ def signup_duplicate_email
 end
 
 def signin1
-  click_button 'Login'
+  click_button 'LOGIN'
   fill_in(:username, with: 'user1')
   fill_in(:password, with: 'password1')
   click_button 'log_in'
@@ -47,7 +47,7 @@ end
 
 
 def signin2
-  click_button 'Login'
+  click_button 'LOGIN'
   fill_in(:username, with: 'user2')
   fill_in(:password, with: 'password2')
   click_button 'log_in'

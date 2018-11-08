@@ -1,7 +1,6 @@
-
-
   body {
       font: normal 15px Verdana, sans-serif;
+      background-color: white;
   }
 
   .sign_up_form {
@@ -43,10 +42,78 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    height: 80;
+}
+
+#spaces_button {
+  border: none;
+  height: -webkit-fill-available;
+}
+
+#requests_button {
+  border: none;
+  height: -webkit-fill-available;
+}
+#logout_button {
+  border: none;
+  height: -webkit-fill-available;
+}
+
+#login_button {
+  border: none;
+  height: -webkit-fill-available;
+}
+
+#li_button {
+  height: -webkit-fill-available;
+  width: 100;
+  border: none;
+  font-size: 15;
+  height: 80px;
+  background-color: #808080;
+  color: white;
+  border-left: solid;
+  border-width: thin;
+}
+
+#s_button {
+  height: -webkit-fill-available;
+  width: 100;
+  border: none;
+  font-size: 15;
+  height: 80px;
+  background-color: #808080;
+  color: white;
+  border-left: solid;
+  border-width: thin;
+}
+#r_button {
+  height: -webkit-fill-available;
+  width: 100;
+  border: none;
+  font-size: 15;
+  height: 80px;
+  background-color: #808080;
+  color: white;
+  border-left: solid;
+  border-width: thin;
+}
+
+#l_button {
+  height: -webkit-fill-available;
+  width: 100;
+  border: none;
+  font-size: 15;
+  height: 80px;
+  background-color: #808080;
+  color: white;
+  border-left: solid;
+  border-width: thin;
 }
 
 li {
     float: right;
+    height: -webkit-fill-available;
 }
 
 li a {
@@ -64,4 +131,13 @@ li a:hover {
 
 .active {
     background-color: #808080;
+}
+
+#space {
+  background-color: #dae1e8;
+  width: 60%;
+  border: double;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  border-color: slategray;
 }
