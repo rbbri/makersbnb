@@ -19,16 +19,20 @@
   <script src="pickadate/lib/picker.js"></script>
   <script src="pickadate/lib/picker.date.js"></script>
 
-  <script>
 
+  <script>
+    <% @array = [[2018, 10, 13], [2018, 10, 18] ] %>
+    var array = <%= @array %>
+    console.log(array.length)
     var $input = $('#input_from').pickadate()
     var picker = $input.pickadate('picker')
-    picker.set('disable', [
-      [2018,10,8],
-      [2018,10,9],
-      { from: [2018, 10, 13], to: [2018, 10, 18] }
-
-    ])
+    picker.set('min', true);
+    // picker.set('disable', [
+    //   [2018,10,8],
+    //   [2018,10,9],
+    //   { from: [2018, 10, 13], to: [2018, 10, 18] }
+    //
+    // ])
 
 
   </script>

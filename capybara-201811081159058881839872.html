@@ -1,0 +1,48 @@
+<body>
+  <link rel="stylesheet" href="/style.css">
+
+<div class='menu' align='right'>
+
+<a href="/">
+<img src='/images/makers_logo.png' class="logo" align="left"></img>
+</a>
+  <ul>
+    <li>
+      <form action = '/spaces'>
+        <input type="submit" value="Spaces">
+      </form>
+    </li>
+    <li>
+      <form class='active' action = '/requests'>
+        <input type="submit" value="Requests">
+      </form>
+    </li>
+    <li>
+      <form action = '/sessions' method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Logout">
+      </form>
+    </li>
+  </ul>
+</div>
+
+<h1>Requests</h1>
+<table>
+  <tr>
+    <th>Requests I've made</th>
+    <th>Requests I've received</th>
+  </tr>
+  <tr>
+    <td id="requests_made">
+      <div id="request_made_Devon">
+        Devon
+        2018-01-01
+        5
+        Awaiting confirmation
+      </div>
+    </td>
+    <td id="requests_received">    </td>
+  </tr>
+</table>
+
+</body>
