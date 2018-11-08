@@ -1,0 +1,31 @@
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class='menu' align='right'>
+    <a href="/">
+      <img src='/images/makers_logo.png' class="logo" align="left"></img>
+    </a>
+    <ul>
+      <li>
+        <form id="logout_button" action = '/sessions' method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input id="l_button" type="submit" value="LOGOUT">
+        </form>
+      </li>
+      <li>
+        <form id="spaces_button" class='active' action = '/spaces'>
+          <input id="s_button" type="submit" value="SPACES">
+        </form>
+      </li>
+      <li>
+        <form id="requests_button" action = '/requests'>
+          <input id="r_button" type="submit" value="REQUESTS">
+        </form>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <%= yield  %>
+  </div>
+</body>
