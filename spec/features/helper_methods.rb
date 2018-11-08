@@ -71,11 +71,15 @@ end
 
 def request_cornwall
   click_link 'Cornwall'
+  fill_in("start_date", with: "2018-11-11")
+  select '1', :from => 'nights'
   click_button 'Request to Book'
 end
 
 def request_devon
   click_link 'Devon'
+  fill_in("start_date", with: "2018-11-12")
+  select '2', :from => 'nights'
   click_button 'Request to Book'
 end
 

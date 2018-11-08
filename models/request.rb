@@ -6,6 +6,6 @@ class Request < ActiveRecord::Base
   validates :space_id, presence: true
   # validates :date_created, presence: true
   validates :start_date, presence: true
-  validates :end_date, presence: true
+  validates :nights, presence: true
   validates :confirmation_status, presence: true
 end
