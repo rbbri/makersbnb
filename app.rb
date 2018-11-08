@@ -95,10 +95,11 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/requests' do
-    start_date = "#{params[:in_year]}-#{params[:in_month]}-#{params[:in_date]}"
+    p params
+    start_date = "#{params[:start_date]}"
     @user.requests.create(
       start_date: start_date,
-      nights: 5,
+      nights: params[:nights],
       space_id: params[:id]
     )
     redirect '/requests'
@@ -119,7 +120,7 @@ class MakersBNB < Sinatra::Base
       space.bookings.create(
         request_id: request.id,
         start_date: request.start_date,
-        nights: 5
+        nights: request.nights
       )
     end
     redirect '/requests'
