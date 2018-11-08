@@ -77,7 +77,7 @@ end
 def request_devon
   click_link 'Devon'
   fill_in("start_date", with: "2018-11-5")
-  fill_in("nights", with: "4")
+  select '4', :from => 'nights'
   click_button 'Request to Book'
 end
 

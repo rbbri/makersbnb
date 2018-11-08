@@ -35,20 +35,18 @@
     </div>
 
     <input type="text" value="<%= Time.new.year %>-<%= Time.new.month %>-<%= Time.new.day %>" id="input_from" class="picker__input picker__input--active" name="start_date">
-    <input type="text" name="nights" value="1">
-    <!-- <table class="start_date" align="center">
-      <tr>
-        <td><select name="nights">
-          <option value="1">1</option>
+    <!-- <input type="text" name="nights" value="1"> -->
+
+        <select name="nights" id='nights'>
+          <option selected='selected' value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
           <option value="6">6</option>
           <option value="7">7</option>
-        </select></td>
-      </tr>
-    </table> -->
+        </select>
+
     <input type="submit" value="Request to Book">
   </form>
 
