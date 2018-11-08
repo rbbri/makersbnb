@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_143442) do
+ActiveRecord::Schema.define(version: 2018_11_08_115000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2018_11_07_143442) do
     t.bigint "request_id"
     t.datetime "date_created"
     t.date "start_date"
-    t.date "end_date"
+    t.integer "nights"
     t.index ["request_id"], name: "index_bookings_on_request_id"
     t.index ["space_id"], name: "index_bookings_on_space_id"
   end
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 2018_11_07_143442) do
     t.bigint "space_id"
     t.datetime "date_created"
     t.date "start_date"
-    t.date "end_date"
     t.string "confirmation_status", default: "Awaiting confirmation"
+    t.integer "nights"
     t.index ["space_id"], name: "index_requests_on_space_id"
     t.index ["user_id"], name: "index_requests_on_user_id"
   end

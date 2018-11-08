@@ -10,7 +10,7 @@
       <div id="request_made_<%= request.space.name %>">
         <%= request.space.name %>
         <%= request.start_date %>
-        <%= request.end_date %>
+        <%= request.nights %>
         <%= request.confirmation_status %>
       </div>
     <% end %>
@@ -19,7 +19,7 @@
       <div id="request_received_<%= request.space.name %>">
         <%= request.space.name %>
         <%= request.start_date %>
-        <%= request.end_date %>
+        <%= request.nights %>
         <% if request.confirmation_status == 'Awaiting confirmation' %>
           <form id="confirm_deny" action="/requests/<%= request.id %>" method="post">
             <button type="submit" value="Confirmed" name="status">Confirm</button>
