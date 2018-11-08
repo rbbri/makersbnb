@@ -1,0 +1,38 @@
+<head>
+  <link rel="stylesheet" href="./bower_components/pickadate/lib/themes/classic.css">
+  <link rel="stylesheet" href="./bower_components/pickadate/lib/themes/classic.date.css">
+</head>
+
+<body>
+<form>
+    <input type="text" id="input_from" class="picker__input picker__input--active">
+</form>
+
+
+
+
+
+  <script src="./bower_components/jquery/dist/jquery.js"></script>
+  <script src="./bower_components/pickadate/lib/legacy.js"></script>
+  <script src="./bower_components/pickadate/lib/picker.js"></script>
+  <script src="./bower_components/pickadate/lib/picker.date.js"></script>
+
+
+
+  <script>
+    <% @array = [[2018, 10, 13], [2018, 10, 18] ] %>
+    var array = <%= @array.inspect.html_safe %>
+    console.log(array.length)
+    // var $input = $('#input_from').pickadate()
+    // var picker = $input.pickadate('picker')
+    // picker.set('disable', [
+    //   array
+    //   // [2018,10,8],
+    //   // [2018,10,9],
+    //   // { from: [2018, 10, 13], to: [2018, 10, 18] }
+    //
+    // ])
+  </script>
+
+
+</body>

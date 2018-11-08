@@ -125,4 +125,9 @@ class MakersBNB < Sinatra::Base
     end
     redirect '/requests'
   end
+
+  get '/calendar' do
+    erb :calendar
+  end
+
 end
