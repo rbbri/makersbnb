@@ -6,19 +6,19 @@
     </a>
     <ul>
       <li>
-        <form class='active' action = '/spaces'>
-          <input type="submit" value="Spaces">
+        <form id="spaces_button" class='active' action = '/spaces'>
+          <input id="s_button" type="submit" value="Spaces">
         </form>
       </li>
       <li>
-        <form action = '/requests'>
-          <input type="submit" value="Requests">
+        <form id="requests_button" action = '/requests'>
+          <input id="r_button" type="submit" value="Requests">
         </form>
       </li>
       <li>
-        <form action = '/sessions' method="post">
+        <form id="logout_button" action = '/sessions' method="post">
           <input type="hidden" name="_method" value="delete">
-          <input type="submit" value="Logout">
+          <input id="l_button" type="submit" value="Logout">
         </form>
       </li>
     </ul>
