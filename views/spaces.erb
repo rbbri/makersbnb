@@ -1,4 +1,4 @@
-<body>
+<body align= "center">
   <link rel="stylesheet" href="/style.css">
 
 <h2>Welcome <%= @user.name %>!</h2>
@@ -9,10 +9,12 @@
 </form>
 
 
-<div class='spaces'>
+<div align= "center" class='spaces'>
   <% @spaces.each do |space|%>
+    <div id="space">
     <a href="/spaces/<%= space.id %>"><%= space.name %></a>
     <p><%= space.description %></p>
     <p>£<%= space.price %></p>
+    </div>
   <% end %>
 <div>

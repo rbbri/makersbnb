@@ -1,8 +1,6 @@
-
-
   body {
       font: normal 15px Verdana, sans-serif;
-      background-color: #dae1e8;
+      background-color: white;
   }
 
   .sign_up_form {
@@ -133,4 +131,13 @@ li a:hover {
 
 .active {
     background-color: #808080;
+}
+
+#space {
+  background-color: #dae1e8;
+  width: 60%;
+  border: double;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  border-color: slategray;
 }
