@@ -1,4 +1,4 @@
-feature "confirming a space" do
+feature 'confirming a space' do
   before do
     visit '/'
     signup1
@@ -8,7 +8,7 @@ feature "confirming a space" do
     signup2
     request_devon
     within('div.request') do
-      expect(page).to have_content "Awaiting confirmation"
+      expect(page).to have_content 'Awaiting confirmation'
     end
     click_button 'LOGOUT'
     visit '/'
@@ -16,7 +16,7 @@ feature "confirming a space" do
     click_button 'REQUESTS'
   end
 
-  scenario "an owner confirms a space" do
+  scenario 'an owner confirms a space' do
     within('div.request') do
       click_button 'Confirm'
     end
@@ -30,10 +30,10 @@ feature "confirming a space" do
     signin2
     click_button 'REQUESTS'
     within('div.request') do
-      expect(page).to have_content "Confirmed"
+      expect(page).to have_content 'Confirmed'
     end
   end
-  scenario "an owner rejects a space" do
+  scenario 'an owner rejects a space' do
     within('div.request') do
       click_button 'Reject'
     end
@@ -42,10 +42,7 @@ feature "confirming a space" do
     signin2
     click_button 'REQUESTS'
     within('div.request') do
-      expect(page).to have_content "Rejected"
+      expect(page).to have_content 'Rejected'
     end
   end
-
-
-
 end

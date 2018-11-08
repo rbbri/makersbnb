@@ -1,6 +1,5 @@
 require './models/booking'
 describe 'Booking' do
-
   describe 'Validations' do
     it 'belongs to a space' do
       association = Booking.reflect_on_association(:space)
@@ -11,5 +10,4 @@ describe 'Booking' do
       expect(association.macro).to eq :belongs_to
     end
   end
-
 end

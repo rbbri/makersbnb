@@ -4,7 +4,6 @@ def signup1
   fill_in(:name, with: 'User One')
   fill_in(:email, with: 'user1@example.com')
   click_button 'Sign Up'
-
 end
 
 def signup2
@@ -14,7 +13,6 @@ def signup2
   fill_in(:name, with: 'User Two')
   fill_in(:email, with: 'user2@example.com')
   click_button 'Sign Up'
-
 end
 
 def signup3
@@ -24,7 +22,6 @@ def signup3
   fill_in(:name, with: 'User Three')
   fill_in(:email, with: 'user3@example.com')
   click_button 'Sign Up'
-
 end
 
 def signup_duplicate_user
@@ -34,7 +31,6 @@ def signup_duplicate_user
   fill_in(:name, with: 'User One')
   fill_in(:email, with: 'user2@example.com')
   click_button 'Sign Up'
-
 end
 
 def signup_duplicate_email
@@ -44,7 +40,6 @@ def signup_duplicate_email
   fill_in(:name, with: 'User One')
   fill_in(:email, with: 'user1@example.com')
   click_button 'Sign Up'
-
 end
 
 def signin1
@@ -53,7 +48,6 @@ def signin1
   fill_in(:password, with: 'password1')
   click_button 'log_in'
 end
-
 
 def signin2
   click_button 'LOGIN'
@@ -80,14 +74,14 @@ end
 
 def request_cornwall
   click_link 'Cornwall'
-  fill_in("start_date", with: "2018-11-11")
-  select '1', :from => 'nights'
+  fill_in('start_date', with: '2018-11-11')
+  select '1', from: 'nights'
   click_button 'Request to Book'
 end
 
 def request_devon
   click_link 'Devon'
-  fill_in("start_date", with: "2018-11-12")
-  select '2', :from => 'nights'
+  fill_in('start_date', with: '2018-11-12')
+  select '2', from: 'nights'
   click_button 'Request to Book'
 end
