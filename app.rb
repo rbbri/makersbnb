@@ -95,7 +95,6 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/requests' do
-    p params
     start_date = "#{params[:start_date]}"
     @user.requests.create(
       start_date: start_date,
