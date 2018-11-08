@@ -18,15 +18,6 @@
         null,
         null
       ],
-      "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/models/booking.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
       "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/spec/features/confirmation_status_spec.rb": [
         1,
         1,
@@ -90,44 +81,6 @@
         1,
         1,
         1,
-        null,
-        null
-      ],
-      "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/spec/features/milestone_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
         null,
         null
       ],
@@ -263,6 +216,6 @@
         null
       ]
     },
-    "timestamp": 1541607422
+    "timestamp": 1541671503
   }
 }
