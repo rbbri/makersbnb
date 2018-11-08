@@ -34,11 +34,6 @@ feature "confirming a space" do
     within('div#request_received_Devon') do
       click_button 'Reject'
     end
-    within('div#request_received_Devon') do
-      expect(page).not_to have_selector(:button, 'Confirm')
-      expect(page).not_to have_selector(:button, 'Reject')
-      expect(page).to have_content 'Rejected'
-    end
     click_button 'Logout'
     signin2
     click_button 'Requests'
