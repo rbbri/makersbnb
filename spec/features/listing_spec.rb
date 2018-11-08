@@ -2,7 +2,7 @@ feature 'listing a space' do
   scenario 'a logged in user lists a new space' do
     visit '/'
     signup1
-    click_button 'List a Space'
+    click_button 'HOST'
     fill_in 'name', with: 'Listing 1'
     fill_in 'description', with: 'Description 1'
     fill_in 'price', with: '1'

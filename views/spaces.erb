@@ -3,18 +3,22 @@
 
 <h2>Welcome <%= @user.name %>!</h2>
 
-<h1> Book a space </h1>
-<form action="/spaces/new">
-  <input type="submit" id="list_a_space" value="List a Space"></input>
-</form>
-
 
 <div align= "center" class='spaces'>
-  <% @spaces.each do |space|%>
-    <div id="space">
+<table>
+
+  <td>
+    <% @spaces.each do |space|%>
+    <tr>
+    <td>
+    <div class="space">
     <a href="/spaces/<%= space.id %>"><%= space.name %></a>
     <p><%= space.description %></p>
     <p>£<%= space.price %></p>
+    </td>
+    <td>
+      <img src='/images/property_placeholder.jpg'></img>
+      </td>
+      </tr>
     </div>
-  <% end %>
-<div>
+    <% end %>

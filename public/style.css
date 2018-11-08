@@ -1,5 +1,5 @@
   body {
-      font: normal 15px verdana, sans-serif;
+      font: normal 12px verdana, sans-serif;
       background-color: white;
   }
 
@@ -44,6 +44,11 @@ clear: both;
   width: 80px;
   height: 80px;
 }
+
+.list {
+   margin: auto;
+   text-align: center;
+ }
 
 ul {
     list-style-type: none;
@@ -143,33 +148,30 @@ li a:hover {
 }
 
 #space {
-  background-color: #dae1e8;
-  width: 60%;
+  background-color: #808080;
+  width: 100%;
   border: double;
   padding-top: 10px;
   margin-bottom: 10px;
   border-color: slategray;
 }
 
-#request_made {
-  background-color: #dae1e8;
-  width: 60%;
-  border: double;
+
+
+.request {
+  background-color: #808080;
+  width: 80%;
   padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: white;
   margin-bottom: 10px;
-  border-color: slategray;
-  margin: 0 auto;
+  text-indent: 1em;
+  text-align: left;
+  font: 10px verdana;
+  color: white;
 }
 
-#request_received {
-  background-color: #dae1e8;
-  width: 60%;
-  border: double;
-  padding-top: 10px;
-  margin-bottom: 10px;
-  border-color: slategray;
-  margin: 0 auto;
-}
+
 
 #sign_up_table {
   padding: 15px;
@@ -180,14 +182,11 @@ li a:hover {
   width: 80%;
   clear: both;
   margin: 0 auto;
-  border-style: solid;
 }
 
 #requests_table th {
-  padding: 15px;
   clear: both;
-  align: center;
-  border-style: solid;
+  text-align: left;
 }
 
 #requests_table tr {
@@ -197,12 +196,64 @@ li a:hover {
   border-style: solid;
 }
 
+#requests_table td {
+  padding: 5px;
+  margin-left: 5px;
+  clear: both;
+  align: center;
+  border-style: solid;
+  border-color: white;
+  white-space: nowrap;
+}
+
 .requests {
   text-align: center;
   margin: 0 auto;
 }
 
+
+.space {
+  background-color: #808080;
+  width: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: white;
+  margin-bottom: 10px;
+  text-indent: 1em;
+  text-align: left;
+  color: white;
+
+}
+
+a {
+  color: black;
+}
+
+
 .no_request {
   padding: 30px;
   text-align: center;
+}
+
+button {
+    background-color: #55555;
+    border: none;
+    color: black;
+    padding: 0px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+
+button[class='background'] {
+    background-color: black;
+    border: none;
+    margin: 10px auto;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
 }

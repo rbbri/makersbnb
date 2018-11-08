@@ -13,11 +13,11 @@ feature 'requesting a space' do
     click_button 'LOGOUT'
     signin2
     click_button 'REQUESTS'
-    within('td#requests_made') do
+    within('td.requests_made') do
       expect(page).to have_content 'Devon'
       expect(page).not_to have_content 'Cornwall'
     end
-    within('td#requests_received') do
+    within('td.requests_received') do
       expect(page).to have_content 'Cornwall'
       expect(page).not_to have_content 'Devon'
     end

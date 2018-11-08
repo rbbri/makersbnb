@@ -73,7 +73,7 @@ class MakersBNB < Sinatra::Base
 
   delete '/sessions' do
     session[:user] = nil
-    redirect '/'
+    redirect '/sessions/new'
   end
 
   get '/spaces/new' do
