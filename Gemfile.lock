@@ -155,6 +155,9 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.4)
       tilt (~> 2.0)
+    sinatra-activerecord (2.0.13)
+      activerecord (>= 3.2)
+      sinatra (>= 1.0)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
     standalone_migrations (5.2.6)
@@ -197,6 +200,7 @@ DEPENDENCIES
   simplecov
   simplecov-console
   sinatra
+  sinatra-activerecord
   sinatra-flash
   standalone_migrations
 

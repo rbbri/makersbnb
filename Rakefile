@@ -1,5 +1,6 @@
 require 'rake'
 require 'rspec/core/rake_task'
+require 'sinatra/activerecord'
 require 'standalone_migrations'
 
 RSpec::Core::RakeTask.new(:spec) do |t|
