@@ -1,4 +1,5 @@
 require 'json'
+# Module to convert bookings into format readable by pickadate calendar
 module BookingConverter
   def self.convert(booking)
     if booking.nights == 1
