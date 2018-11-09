@@ -67,7 +67,7 @@ class MakersBNB < Sinatra::Base
 
   post '/sessions' do
     user = User.find_by(
-      username: params[:username],
+      username: params[:username]
     )
     if user.nil? || BCrypt::Password.new(user.password) != params[:password]
       flash[:error] = 'Incorrect username or password'
@@ -105,7 +105,7 @@ class MakersBNB < Sinatra::Base
       BookingConverter.convert(booking)
     end
     @unavailable_dates = Booking.all.map { |booking| booking.start_date.to_s }
-    @unavailable_dates.push((@space.end_date+1).to_s)
+    @unavailable_dates.push((@space.end_date + 1).to_s)
     erb :space_id, layout: :logged_in_header
   end
 
