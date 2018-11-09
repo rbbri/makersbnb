@@ -12,7 +12,7 @@
 - To run our tests, run rspec from the command line
 
 
-## User Stories ##
+## User stories ##
 ```
 As a user
 So I can use the site
@@ -51,12 +51,30 @@ So that I can choose who to rent my space to
 I would like spaces to still be available until a booking is confirmed
 ```
 
-## Our Approach ##
+## Our approach ##
 
-We are using Ruby and Sinatra to implement this project. Our calendar  We will use rubocop to assess style, simplecov to assess our test coverage and flog to assess the complexity of our code.
+We are using Ruby and Sinatra to implement this project. The calendar uses the Pickadate package which required some JavaScript to be included in our program. We used rubocop to assess style and simplecov to assess our test coverage.
 
-Our definition of done:
+Our standards for completion were:
 * 95% test coverage
 * No linting issues with rubocop
-* Methods with a flog complexity under 6
-* Classes with a flog complexity under 15
+
+
+## Plans for further development ##
+
+* To send emails to users in the following situations
+  - they sign up
+  - create a space
+  - they update a space
+  - a user requests to book their space
+  - a booking or request is made
+* Users/owners can delete or edit requests/bookings
+* To deploy to Heroku
+* To *automatically* reject all booking which clash with a confirmed booking
+
+## Contributors ##
+
+Chris Cooksley (Learner5200)
+Robin Johnson (rbbri)
+Jude Lloyd-Jones (JL-J)
+Imogen Misso (imogenmisso)
