@@ -27,5 +27,10 @@
     picker.set('select', true);
     picker.set('min', true);
     picker.set('disable', ranges);
+    updateNightsAvailable(picker.get('select', 'yyyy-mm-dd'), <%= @start_dates %>);
+    $('#start_date').change (function() {
+      updateNightsAvailable(picker.get('select', 'yyyy-mm-dd'), <%= @start_dates %>);
+    });
+
   </script>
 </body>

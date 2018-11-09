@@ -45,4 +45,5 @@ feature 'confirming a space' do
       expect(page).to have_content 'Rejected'
     end
   end
+
 end
