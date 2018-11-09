@@ -36,6 +36,13 @@
         return Math.floor((nextDate - targetDate)/dayDivisor) || 7
       }
       var days = nextDate(picker.get('select', 'yyyy-mm-dd'), <%= @start_dates %>)
+      if (days < 7) {
+        for (var i=days+1; i<8; i++) {
+          $(`#nights option[value=${i}]`).hide();
+        };
+      };
+
+
       console.log(days)
     });
 
