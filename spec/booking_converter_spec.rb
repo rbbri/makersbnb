@@ -1,7 +1,9 @@
 require 'booking_converter'
 require 'date'
 describe BookingConverter do
-  let(:booking) { double(:booking, start_date: Date.parse('2018-11-15'), nights: 4) }
+  let(:booking) do
+    double(:booking, start_date: Date.parse('2018-11-15'), nights: 4)
+  end
   describe '.convert' do
     it 'converts booking' do
       range = BookingConverter.convert(booking)
