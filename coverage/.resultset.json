@@ -77,6 +77,7 @@
         1,
         null,
         null,
+        null,
         null
       ],
       "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/listing_spec.rb": [
@@ -94,6 +95,41 @@
         1,
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/judithlloyd-jones/Desktop/Projects/makersbnb/spec/features/rejecting_bookings_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -256,6 +292,6 @@
         null
       ]
     },
-    "timestamp": 1541759572
+    "timestamp": 1541767295
   }
 }

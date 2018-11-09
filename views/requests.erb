@@ -28,8 +28,9 @@
         <p> <%= request.space.name %></p>
         <p>Check-in date: <%= request.start_date %></p>
         <p>Number of nights: <%= request.nights %></p>
+        <p class="user_name">Made by: <%= request.user.name  %></p>
         <p><% if request.confirmation_status == 'Awaiting confirmation' %>
-          <form id="confirm_deny" action="/requests/<%= request.id %>" method="post">
+          <form id="confirm_deny_<%= request.user.username %>" action="/requests/<%= request.id %>" method="post">
             <button type="submit" value="Confirmed" name="status">Confirm</button>
             <button type="submit" value="Rejected" name="status">Reject</button>
           </form>
