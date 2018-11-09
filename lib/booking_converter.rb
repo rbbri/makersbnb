@@ -1,7 +1,11 @@
 require 'json'
 module BookingConverter
   def self.convert(booking)
-    { from: arrayify(booking.start_date), to: (booking.nights - 1) }.to_json
+    if booking.nights == 1
+      self.arrayify(booking.start_date).to_s
+    else
+      { from: self.arrayify(booking.start_date), to: (booking.nights-1) }.to_json
+    end
   end
 
   def self.arrayify(date)

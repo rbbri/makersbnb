@@ -88,16 +88,18 @@ class MakersBNB < Sinatra::Base
     @user.spaces.create(
       name: params[:name],
       description: params[:description],
-      price: params[:price]
+      price: params[:price],
+      start_date: params[:start_date],
+      end_date: params[:end_date]
     )
     redirect '/spaces'
   end
 
   get '/spaces/:id' do
-    @ranges = Booking.all.map do |booking|
+    @space = Space.find(params[:id])
+    @ranges = @space.bookings.all.map do |booking|
       BookingConverter.convert(booking)
     end
-    @space = Space.find(params[:id])
     @start_dates = Booking.all.map { |booking| booking.start_date.to_s }
     erb :space_id, layout: :logged_in_header
   end

@@ -11,7 +11,23 @@
       <input type="text" name="description">
       <label for="price">Price</label>
       <input type="text" name="price">
+      <label for="available_from">Available from</label>
+      <input type="text" value="<%= Time.new.year %>-<%= Time.new.month %>-<%= Time.new.day %>" id="start_date" class="picker__input picker__input--active" name="start_date">
+      <label for="available_until">Available until</label>
+      <input type="text" value="<%= Time.new.year %>-<%= Time.new.month %>-<%= Time.new.day %>" id="end_date" class="picker__input picker__input--active" name="end_date">
       <button class='background' type="submit" value="List my Space">
         List my space </button>
     </form>
+
+    <script>
+      var $input = $('#start_date').pickadate()
+      var $input2 = $('#end_date').pickadate()
+      var picker = $input.pickadate('picker')
+      var picker2 = $input2.pickadate('picker2')
+      picker.set('select', true);
+      picker.set('min', true);
+      picker2.set('select', true);
+      picker2.set('max', true);
+    </script>
+
   </div>
