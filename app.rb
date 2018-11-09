@@ -100,6 +100,7 @@ class MakersBNB < Sinatra::Base
     @ranges = @space.bookings.all.map do |booking|
       BookingConverter.convert(booking)
     end
+    @start_dates = Booking.all.map { |booking| booking.start_date.to_s }
     erb :space_id, layout: :logged_in_header
   end
 
