@@ -1,6 +1,19 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/spec/booking_hasher_spec.rb": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/chriscooksley/Google Drive/CODING/MAKERS/WEEKS/Week 6 - Makers BnB Group Project/work/makersbnb/spec/booking_spec.rb": [
         1,
         1,
@@ -242,6 +255,6 @@
         null
       ]
     },
-    "timestamp": 1541693539
+    "timestamp": 1541702161
   }
 }
