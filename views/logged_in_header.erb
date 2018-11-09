@@ -12,9 +12,9 @@
 <body>
 
   <div class='menu' align='right'>
-    <a href="/">
+
       <img src='/images/makers_logo.png' class="logo" align="left"></img>
-    </a>
+
     <ul>
       <li>
         <form id="logout_button" action = '/sessions' method="post">
@@ -30,6 +30,11 @@
       <li>
         <form id="requests_button" action = '/requests'>
           <input id="r_button" type="submit" value="REQUESTS">
+        </form>
+      </li>
+      <li>
+        <form id="requests_button" action = '/spaces/new'>
+          <input id="r_button" type="submit" value="HOST">
         </form>
       </li>
     </ul>

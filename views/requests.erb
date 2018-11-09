@@ -1,26 +1,34 @@
+<body>
 
-<h1>Requests</h1>
-<table>
+<div class='requests'>
+
+<table id='requests_table'>
   <tr>
     <th>Requests I've made</th>
     <th>Requests I've received</th>
   </tr>
   <tr>
-    <td id="requests_made"><% @requests_made.each do |request| %>
-      <div id="request_made_<%= request.space.name %>">
-        <%= request.space.name %>
-        <%= request.start_date %>
-        <%= request.nights %>
-        <%= request.confirmation_status %>
-      </div>
+    <td class="requests_made"><% @requests_made.each do |request| %>
+      <div class="request">
+        <p> <%= request.space.name %></p>
+        <p>Check-in date: <%= request.start_date %></p>
+        <p>Number of nights: <%= request.nights %></p>
+        <p><%= request.confirmation_status %></p>
+        </div>
+    <% end %>
+
+
+    <% if @requests_made.nil? %>
+      <%="No current requests made"%>
     <% end %>
     </td>
-    <td id="requests_received"><% @requests_received.each do |request| %>
-      <div id="request_received_<%= request.space.name %>">
-        <%= request.space.name %>
-        <%= request.start_date %>
-        <%= request.nights %>
-        <% if request.confirmation_status == 'Awaiting confirmation' %>
+
+    <td class="requests_received"> <% @requests_received.each do |request| %>
+      <div class="request">
+        <p> <%= request.space.name %></p>
+        <p>Check-in date: <%= request.start_date %></p>
+        <p>Number of nights: <%= request.nights %></p>
+        <p><% if request.confirmation_status == 'Awaiting confirmation' %>
           <form id="confirm_deny" action="/requests/<%= request.id %>" method="post">
             <button type="submit" value="Confirmed" name="status">Confirm</button>
             <button type="submit" value="Rejected" name="status">Reject</button>
@@ -28,10 +36,16 @@
         <% else %>
           <%= request.confirmation_status %>
         <% end %>
-      </div>
+        </div>
     <% end %>
-    </td>
-  </tr>
-</table>
+    <% if @requests_received.nil? %>
+
+      <div class='no_request'>
+      <%= "No current requests received" %>
+      <% end %>
+
+      </div>
+  </td>
+</table
 
 </body>
