@@ -5,6 +5,7 @@ require_relative './models/user'
 require_relative './models/space'
 require_relative './models/request'
 require_relative './models/booking'
+require_relative './lib/booking_converter'
 require 'pry'
 require 'json'
 
@@ -91,14 +92,8 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces/:id' do
-    @bookings = Booking.all
-    def arrayify(date)
-      date_array = date.to_s.split("-").map{|num| num.to_i}
-      date_array[1] -= 1
-      date_array
-    end
-    @ranges = @bookings.map do |booking|
-      { from: arrayify(booking.start_date), to: booking.nights }.to_json
+    @ranges = Booking.all.map do |booking|
+      BookingConverter.convert(booking)
     end
     @space = Space.find(params[:id])
     erb :space_id, :layout => :logged_in_header
