@@ -25,8 +25,6 @@
     var $input = $('#start_date').pickadate()
     var picker = $input.pickadate('picker')
     picker.set('select', true);
-    console.log(<%= @min %>)
-    console.log(<%= @max %>)
     picker.set('min', <%= @min %>);
     picker.set('max', <%= @max %>);
     picker.set('disable', ranges);
