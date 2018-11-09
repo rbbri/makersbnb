@@ -11,3 +11,7 @@ development:
 test: &test
   <<: *default
   database: makersbnb_test
+
+production:
+  <<: *default
+  database: mydb
