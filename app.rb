@@ -14,7 +14,9 @@ end
 
 ENV['ENVIRONMENT'] ||= 'development'
 
-ActiveRecord::Base.establish_connection(db_configuration[ENV['ENVIRONMENT']])
+ActiveRecord::Base.establish_connection(
+  db_configuration[ENV['ENVIRONMENT'] || 'postgres://localhost/mydb']  
+)
 
 # MakersBnB App
 class MakersBNB < Sinatra::Base

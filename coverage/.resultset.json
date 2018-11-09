@@ -4,7 +4,6 @@
       "/Users/robin/Projects/makersbnb/spec/booking_spec.rb": [
         1,
         1,
-        null,
         1,
         1,
         1,
@@ -13,7 +12,6 @@
         1,
         1,
         1,
-        null,
         null,
         null,
         null
@@ -64,9 +62,6 @@
         1,
         1,
         1,
-        null,
-        null,
-        null,
         null,
         null,
         null
@@ -219,6 +214,6 @@
         null
       ]
     },
-    "timestamp": 1541716845
+    "timestamp": 1541723057
   }
 }
