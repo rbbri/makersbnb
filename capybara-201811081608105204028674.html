@@ -12,9 +12,9 @@
 <body>
 
   <div class='menu' align='right'>
-
+    <a href="/">
       <img src='/images/makers_logo.png' class="logo" align="left"></img>
-
+    </a>
     <ul>
       <li>
         <form id="logout_button" action = '/sessions' method="post">
@@ -32,15 +32,46 @@
           <input id="r_button" type="submit" value="REQUESTS">
         </form>
       </li>
-      <li>
-        <form id="requests_button" action = '/spaces/new'>
-          <input id="r_button" type="submit" value="HOST">
-        </form>
-      </li>
     </ul>
   </div>
   <div>
-    <%= yield  %>
+    <body>
+
+<h1 align="center"> Devon </h1>
+
+  <form action='/requests' method="post">
+    <input type="hidden" name="id" value="6">
+
+    <input type="text" value="2018-11-8" id="start_date" class="picker__input picker__input--active" name="start_date">
+
+    <select name="nights" id='nights'>
+      <option selected='selected' value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+
+    <input type="submit" value="Request to Book">
+  </form>
+
+
+  <script>
+    var $input = $('#input_from').pickadate()
+    var picker = $input.pickadate('picker')
+    picker.set('select', true)
+    picker.set('min', true);
+    // picker.set('disable', [
+    //   [2018,10,8],
+    //   [2018,10,9],
+    //   { from: [2018, 10, 13], to: [2018, 10, 18] }
+    //
+    // ])
+  </script>
+</body>
+
   </div>
 
 

@@ -6,6 +6,7 @@ require_relative './models/space'
 require_relative './models/request'
 require_relative './models/booking'
 require 'pry'
+require 'json'
 
 def db_configuration
   db_configuration_file = './db/config.yml'
@@ -92,6 +93,15 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces/:id' do
+    @bookings = Booking.all
+    def arrayify(date)
+      date_array = date.to_s.split("-").map{|num| num.to_i}
+      date_array[1] -= 1
+      date_array
+    end
+    @ranges = @bookings.map do |booking|
+      { from: arrayify(booking.start_date), to: booking.nights }.to_json
+    end
     @space = Space.find(params[:id])
     erb :space_id, layout: :logged_in_header
   end
