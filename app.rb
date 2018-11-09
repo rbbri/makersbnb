@@ -17,7 +17,7 @@ end
 ENV['ENVIRONMENT'] ||= 'development'
 
 ActiveRecord::Base.establish_connection(
-  db_configuration[ENV['ENVIRONMENT'] || 'postgres://localhost/mydb']  
+  db_configuration[ENV['ENVIRONMENT'] || 'postgres://localhost/mydb']
 )
 
 # MakersBnB App
@@ -88,7 +88,9 @@ class MakersBNB < Sinatra::Base
     @user.spaces.create(
       name: params[:name],
       description: params[:description],
-      price: params[:price]
+      price: params[:price],
+      start_date: params[:start_date],
+      end_date: params[:end_date]
     )
     redirect '/spaces'
   end
