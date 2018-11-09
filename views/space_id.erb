@@ -25,11 +25,14 @@
     var $input = $('#start_date').pickadate()
     var picker = $input.pickadate('picker')
     picker.set('select', true);
-    picker.set('min', true);
+    console.log(<%= @min %>)
+    console.log(<%= @max %>)
+    picker.set('min', <%= @min %>);
+    picker.set('max', <%= @max %>);
     picker.set('disable', ranges);
-    updateNightsAvailable(picker.get('select', 'yyyy-mm-dd'), <%= @start_dates %>);
+    updateNightsAvailable(picker.get('select', 'yyyy-mm-dd'), <%= @unavailable_dates %>);
     $('#start_date').change (function() {
-      updateNightsAvailable(picker.get('select', 'yyyy-mm-dd'), <%= @start_dates %>);
+      updateNightsAvailable(picker.get('select', 'yyyy-mm-dd'), <%= @unavailable_dates %>);
     });
 
   </script>
