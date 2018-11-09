@@ -28,8 +28,10 @@
     picker.set('min', true);
     picker.set('disable', ranges);
     $('#start_date').change (function() {
-      console.log(picker.get('select', 'yyyy/mm/dd'))
+      var selectedDate = picker.get('select', 'yyyy/mm/dd')
     });
-
+    <% @start_dates.each do |date| %>
+    console.log(<%= date %>)
+    <% end %>
   </script>
 </body>
