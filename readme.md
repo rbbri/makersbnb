@@ -6,9 +6,10 @@
 
 - Fork this repo
 - Run `bundle install`
-- If you do not already have the databases 'makersbnb_development' and 'makersbnb_test', run `rake db:create`
-- Run `rake db:schema:load db:test:prepare` every time a new migration has been added.
+- To create the databases 'makersbnb_development' and 'makersbnb_test', run `rake db:create`
+- Run `rake db:schema:load db:test:prepare`
 - To launch the app from the command line use `rackup` and visit localhost:9292
+- To run our tests, run rspec from the command line
 
 
 ## User Stories ##
@@ -52,7 +53,7 @@ I would like spaces to still be available until a booking is confirmed
 
 ## Our Approach ##
 
-We are using Ruby and Sinatra to implement this project. We will use rubocop to assess style, simplecov to assess our test coverage and flog to assess the complexity of our code.
+We are using Ruby and Sinatra to implement this project. Our calendar  We will use rubocop to assess style, simplecov to assess our test coverage and flog to assess the complexity of our code.
 
 Our definition of done:
 * 95% test coverage
