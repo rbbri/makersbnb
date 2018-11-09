@@ -1,5 +1,7 @@
+require 'bcrypt'
 # User model
 class User < ActiveRecord::Base
+  include BCrypt
   has_many :spaces
   has_many :requests
   validates :username, presence: true, uniqueness: true
