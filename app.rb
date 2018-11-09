@@ -96,10 +96,10 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces/:id' do
-    @ranges = Booking.all.map do |booking|
+    @space = Space.find(params[:id])
+    @ranges = @space.bookings.all.map do |booking|
       BookingConverter.convert(booking)
     end
-    @space = Space.find(params[:id])
     erb :space_id, layout: :logged_in_header
   end
 
