@@ -27,5 +27,9 @@
     picker.set('select', true);
     picker.set('min', true);
     picker.set('disable', ranges);
+    $('#start_date').change (function() {
+      console.log(picker.get('select', 'yyyy/mm/dd'))
+    });
+
   </script>
 </body>
