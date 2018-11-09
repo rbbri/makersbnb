@@ -3,5 +3,4 @@ class Booking < ActiveRecord::Base
   belongs_to :request, foreign_key: 'request_id'
   validates :start_date, presence: true
   validates :nights, presence: true
-
 end

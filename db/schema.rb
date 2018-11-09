@@ -10,45 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_115000) do
-
+ActiveRecord::Schema.define(version: 20_181_108_115_000) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "bookings", force: :cascade do |t|
-    t.bigint "space_id"
-    t.bigint "request_id"
-    t.datetime "date_created"
-    t.date "start_date"
-    t.integer "nights"
-    t.index ["request_id"], name: "index_bookings_on_request_id"
-    t.index ["space_id"], name: "index_bookings_on_space_id"
+  create_table 'bookings', force: :cascade do |t|
+    t.bigint 'space_id'
+    t.bigint 'request_id'
+    t.datetime 'date_created'
+    t.date 'start_date'
+    t.integer 'nights'
+    t.index ['request_id'], name: 'index_bookings_on_request_id'
+    t.index ['space_id'], name: 'index_bookings_on_space_id'
   end
 
-  create_table "requests", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "space_id"
-    t.datetime "date_created"
-    t.date "start_date"
-    t.string "confirmation_status", default: "Awaiting confirmation"
-    t.integer "nights"
-    t.index ["space_id"], name: "index_requests_on_space_id"
-    t.index ["user_id"], name: "index_requests_on_user_id"
+  create_table 'requests', force: :cascade do |t|
+    t.bigint 'user_id'
+    t.bigint 'space_id'
+    t.datetime 'date_created'
+    t.date 'start_date'
+    t.string 'confirmation_status', default: 'Awaiting confirmation'
+    t.integer 'nights'
+    t.index ['space_id'], name: 'index_requests_on_space_id'
+    t.index ['user_id'], name: 'index_requests_on_user_id'
   end
 
-  create_table "spaces", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.integer "price"
-    t.bigint "user_id"
-    t.index ["user_id"], name: "index_spaces_on_user_id"
+  create_table 'spaces', force: :cascade do |t|
+    t.string 'name'
+    t.string 'description'
+    t.integer 'price'
+    t.bigint 'user_id'
+    t.index ['user_id'], name: 'index_spaces_on_user_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password"
-    t.string "name"
-    t.string "email"
+  create_table 'users', force: :cascade do |t|
+    t.string 'username'
+    t.string 'password'
+    t.string 'name'
+    t.string 'email'
   end
-
 end

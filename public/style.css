@@ -1,15 +1,15 @@
   body {
-      font: normal 15px Verdana, sans-serif;
+      font: normal 12px verdana, sans-serif;
       background-color: white;
   }
 
   .sign_up_form {
   width: 400px;
-  margin: auto;
+  margin: 0 auto;
   clear: both;
   border-style: solid;
-  padding-right: 6px;
-
+  padding: 20px;
+  margin-top: 30px;
 }
 
 .sign_up_form input {
@@ -19,11 +19,20 @@
 
 }
 
+.sign_up_form label {
+  width: 100%;
+  clear: both;
+  align: left;
+
+}
+
 .log_in_form {
-width: 400px;
-margin: auto;
-clear: both;
-border-style: solid;
+  width: 400px;
+  margin: 0 auto;
+  clear: both;
+  border-style: solid;
+  padding: 20px;
+  margin-top: 30px;
 }
 
 .log_in_form input {
@@ -35,6 +44,11 @@ clear: both;
   width: 80px;
   height: 80px;
 }
+
+.list {
+   margin: auto;
+   text-align: center;
+ }
 
 ul {
     list-style-type: none;
@@ -65,6 +79,18 @@ ul {
 }
 
 #li_button {
+  height: -webkit-fill-available;
+  width: 100;
+  border: none;
+  font-size: 15;
+  height: 80px;
+  background-color: #808080;
+  color: white;
+  border-left: solid;
+  border-width: thin;
+}
+
+#signup_button {
   height: -webkit-fill-available;
   width: 100;
   border: none;
@@ -134,10 +160,112 @@ li a:hover {
 }
 
 #space {
-  background-color: #dae1e8;
-  width: 60%;
+  background-color: #808080;
+  width: 100%;
   border: double;
   padding-top: 10px;
   margin-bottom: 10px;
   border-color: slategray;
+}
+
+
+
+.request {
+  background-color: #808080;
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: white;
+  margin-bottom: 10px;
+  text-indent: 1em;
+  text-align: left;
+  font: 10px verdana;
+  color: white;
+}
+
+
+
+#sign_up_table {
+  padding: 15px;
+}
+
+#requests_table {
+  padding: 15px;
+  width: 80%;
+  clear: both;
+  margin: 0 auto;
+}
+
+#requests_table th {
+  clear: both;
+  text-align: left;
+}
+
+#requests_table tr {
+  padding: 15px;
+  clear: both;
+  align: center;
+  border-style: solid;
+}
+
+#requests_table td {
+  padding: 5px;
+  margin-left: 5px;
+  clear: both;
+  align: center;
+  border-style: solid;
+  border-color: white;
+  white-space: nowrap;
+}
+
+.requests {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.space {
+  background-color: #808080;
+  width: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: white;
+  margin-bottom: 10px;
+  text-indent: 1em;
+  text-align: left;
+  color: white;
+
+}
+
+a {
+  color: black;
+}
+
+
+.no_request {
+  padding: 30px;
+  text-align: center;
+}
+
+button {
+    background-color: #55555;
+    border: none;
+    color: black;
+    padding: 0px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+
+button[class='background'] {
+    background-color: black;
+    border: none;
+    margin: 10px auto;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
 }

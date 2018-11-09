@@ -5,7 +5,9 @@ require_relative './models/user'
 require_relative './models/space'
 require_relative './models/request'
 require_relative './models/booking'
+require_relative './lib/booking_converter'
 require 'pry'
+require 'json'
 
 def db_configuration
   db_configuration_file = './db/config.yml'
@@ -14,7 +16,9 @@ end
 
 ENV['ENVIRONMENT'] ||= 'development'
 
-ActiveRecord::Base.establish_connection(db_configuration[ENV['ENVIRONMENT']])
+ActiveRecord::Base.establish_connection(
+  db_configuration[ENV['ENVIRONMENT'] || 'postgres://localhost/mydb']  
+)
 
 # MakersBnB App
 class MakersBNB < Sinatra::Base
@@ -27,7 +31,7 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/' do
-    erb :index, :layout => :welcome_header
+    erb :index, layout: :welcome_header
   end
 
   post '/users' do
@@ -51,11 +55,11 @@ class MakersBNB < Sinatra::Base
 
   get '/spaces' do
     @spaces = Space.all
-    erb :spaces, :layout => :logged_in_header
+    erb :spaces, layout: :logged_in_header
   end
 
   get '/sessions/new' do
-    erb :login, :layout => :welcome_header
+    erb :login, layout: :welcome_header
   end
 
   post '/sessions' do
@@ -73,11 +77,11 @@ class MakersBNB < Sinatra::Base
 
   delete '/sessions' do
     session[:user] = nil
-    redirect '/'
+    redirect '/sessions/new'
   end
 
   get '/spaces/new' do
-    erb :new_space, :layout => :logged_in_header
+    erb :new_space, layout: :logged_in_header
   end
 
   post '/spaces' do
@@ -90,12 +94,15 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces/:id' do
+    @ranges = Booking.all.map do |booking|
+      BookingConverter.convert(booking)
+    end
     @space = Space.find(params[:id])
-    erb :space_id, :layout => :logged_in_header
+    erb :space_id, layout: :logged_in_header
   end
 
   post '/requests' do
-    start_date = "#{params[:start_date]}"
+    start_date = params[:start_date].to_s
     @user.requests.create(
       start_date: start_date,
       nights: params[:nights],
@@ -105,17 +112,17 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/requests' do
-    user_space_requests = @user.spaces.map { |space| space.requests }
+    user_space_requests = @user.spaces.map(&:requests)
     @requests_received = user_space_requests.flatten
     @requests_made = @user.requests
-    erb :requests, :layout => :logged_in_header
+    erb :requests, layout: :logged_in_header
   end
 
   post '/requests/:id' do
     request = Request.find(params[:id])
     request.update(confirmation_status: params[:status])
     space = Space.find(request.space_id)
-    if params[:status] == "Confirmed"
+    if params[:status] == 'Confirmed'
       space.bookings.create(
         request_id: request.id,
         start_date: request.start_date,
@@ -128,5 +135,4 @@ class MakersBNB < Sinatra::Base
   get '/calendar' do
     erb :calendar
   end
-
 end
