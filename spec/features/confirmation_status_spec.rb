@@ -33,6 +33,7 @@ feature 'confirming a space' do
       expect(page).to have_content 'Confirmed'
     end
   end
+  
   scenario 'an owner rejects a space' do
     within('div.request') do
       click_button 'Reject'

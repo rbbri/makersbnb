@@ -1,24 +1,19 @@
-<body align= "center">
-  <link rel="stylesheet" href="/style.css">
-
 <h2>Welcome <%= @user.name %>!</h2>
-
-
 <div align= "center" class='spaces'>
 <table>
-
   <td>
     <% @spaces.each do |space|%>
-    <tr>
-    <td>
-    <div class="space">
-    <a href="/spaces/<%= space.id %>"><%= space.name %></a>
-    <p><%= space.description %></p>
-    <p>£<%= space.price %></p>
-    </td>
-    <td>
+      <tr>
+      <td>
+      <div class="space">
+      <a href="/spaces/<%= space.id %>"><%= space.name %></a>
+      <p><%= space.description %></p>
+      <p>£<%= space.price %></p>
+      </td>
+      <td>
       <img src='/images/property_placeholder.jpg'></img>
       </td>
       </tr>
-    </div>
+     </div>
     <% end %>
+</table>

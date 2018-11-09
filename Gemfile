@@ -23,9 +23,7 @@ group :development, :production do
 end
 
 gem 'bcrypt'
-gem 'flog'
 gem 'json', '~> 1.6'
-gem 'pry'
 gem 'sinatra'
 gem 'sinatra-flash'
 gem 'standalone_migrations'

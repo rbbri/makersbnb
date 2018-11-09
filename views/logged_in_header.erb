@@ -1,21 +1,18 @@
 <head>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/pickadate/lib/themes/classic.css">
-  <link rel="stylesheet" href="/pickadate/lib/themes/classic.date.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/classic.css">
+  <link rel="stylesheet" href="/css/classic.date.css">
 
-  <script src="/jquery/dist/jquery.js"></script>
-  <script src="/pickadate/lib/legacy.js"></script>
-  <script src="/pickadate/lib/picker.js"></script>
-  <script src="/pickadate/lib/picker.date.js"></script>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/legacy.js"></script>
+  <script src="/js/picker.js"></script>
+  <script src="/js/picker.date.js"></script>
   <script src="/js/jqueryFunctions.js"></script>
 </head>
 
 <body>
-
   <div class='menu' align='right'>
-
-      <img src='/images/makers_logo.png' class="logo" align="left"></img>
-
+    <img src='/images/makers_logo.png' class="logo" align="left"></img>
     <ul>
       <li>
         <form id="logout_button" action = '/sessions' method="post">
@@ -43,7 +40,4 @@
   <div>
     <%= yield  %>
   </div>
-
-
-
 </body>

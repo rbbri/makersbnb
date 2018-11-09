@@ -16,14 +16,12 @@
   width: 100%;
   clear: both;
   align: center;
-
 }
 
 .sign_up_form label {
   width: 100%;
   clear: both;
   align: left;
-
 }
 
 .log_in_form {
@@ -150,7 +148,6 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
 }
@@ -168,8 +165,6 @@ li a:hover {
   border-color: slategray;
 }
 
-
-
 .request {
   background-color: #808080;
   width: 80%;
@@ -182,8 +177,6 @@ li a:hover {
   font: 10px verdana;
   color: white;
 }
-
-
 
 #sign_up_table {
   padding: 15px;
@@ -223,7 +216,6 @@ li a:hover {
   margin: 0 auto;
 }
 
-
 .space {
   background-color: #808080;
   width: 500px;
@@ -234,13 +226,11 @@ li a:hover {
   text-indent: 1em;
   text-align: left;
   color: white;
-
 }
 
 a {
   color: black;
 }
-
 
 .no_request {
   padding: 30px;

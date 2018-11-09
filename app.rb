@@ -7,7 +7,6 @@ require_relative './models/space'
 require_relative './models/request'
 require_relative './models/booking'
 require_relative './lib/booking_converter'
-require 'pry'
 require 'json'
 require 'date'
 
@@ -110,9 +109,8 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/requests' do
-    start_date = params[:start_date].to_s
     @user.requests.create(
-      start_date: start_date,
+      start_date: params[:start_date].to_s,
       nights: params[:nights],
       space_id: params[:id]
     )
@@ -138,9 +136,5 @@ class MakersBNB < Sinatra::Base
       )
     end
     redirect '/requests'
-  end
-
-  get '/calendar' do
-    erb :calendar
   end
 end

@@ -1,52 +1,46 @@
-<body>
-
 <div class='requests'>
-
 <table id='requests_table'>
   <tr>
     <th>Requests I've made</th>
     <th>Requests I've received</th>
   </tr>
   <tr>
-    <td class="requests_made"><% @requests_made.each do |request| %>
-      <div class="request">
-        <p> <%= request.space.name %></p>
-        <p>Check-in date: <%= request.start_date %></p>
-        <p>Number of nights: <%= request.nights %></p>
-        <p><%= request.confirmation_status %></p>
+    <td class="requests_made">
+      <% @requests_made.each do |request| %>
+        <div class="request">
+          <p> <%= request.space.name %></p>
+          <p>Check-in date: <%= request.start_date %></p>
+          <p>Number of nights: <%= request.nights %></p>
+          <p><%= request.confirmation_status %></p>
         </div>
-    <% end %>
-
-
-    <% if @requests_made.nil? %>
-      <%="No current requests made"%>
-    <% end %>
+      <% end %>
+      <% if @requests_made.nil? %>
+        <%="No current requests made"%>
+      <% end %>
     </td>
-
-    <td class="requests_received"> <% @requests_received.each do |request| %>
+    <td class="requests_received">
+    <% @requests_received.each do |request| %>
       <div class="request">
         <p> <%= request.space.name %></p>
         <p>Check-in date: <%= request.start_date %></p>
         <p>Number of nights: <%= request.nights %></p>
         <p class="user_name">Made by: <%= request.user.name  %></p>
-        <p><% if request.confirmation_status == 'Awaiting confirmation' %>
-          <form id="confirm_deny_<%= request.user.username %>" action="/requests/<%= request.id %>" method="post">
-            <button type="submit" value="Confirmed" name="status">Confirm</button>
-            <button type="submit" value="Rejected" name="status">Reject</button>
-          </form>
-        <% else %>
-          <%= request.confirmation_status %>
-        <% end %>
-        </div>
-    <% end %>
-    <% if @requests_received.nil? %>
-
-      <div class='no_request'>
-      <%= "No current requests received" %>
-      <% end %>
-
+        <p>
+          <% if request.confirmation_status == 'Awaiting confirmation' %>
+            <form id="confirm_deny_<%= request.user.username %>" action="/requests/<%= request.id %>" method="post">
+              <button type="submit" value="Confirmed" name="status">Confirm</button>
+              <button type="submit" value="Rejected" name="status">Reject</button>
+            </form>
+          <% else %>
+            <%= request.confirmation_status %>
+          <% end %>
+        </p>
       </div>
+    <% end %>
+   <% if @requests_received.nil? %>
+      <div class='no_request'>
+        <%= "No current requests received" %>
+      </div>
+  <% end %>
   </td>
-</table
-
-</body>
+</table>

@@ -1,12 +1,7 @@
-<body>
-
 <h1 align="center"> <%= @space.name %> </h1>
-
-  <form action='/requests' method="post">
-    <input type="hidden" name="id" value="<%= @space.id %>">
-
-    <input type="text" value="<%= Time.new.year %>-<%= Time.new.month %>-<%= Time.new.day %>" id="start_date" class="picker__input picker__input--active" name="start_date">
-
+<form action='/requests' method="post">
+  <input type="hidden" name="id" value="<%= @space.id %>">
+  <input type="text" value="<%= Time.new.year %>-<%= Time.new.month %>-<%= Time.new.day %>" id="start_date" class="picker__input picker__input--active" name="start_date">
     <select name="nights" id='nights'>
       <option selected='selected' value="1">1</option>
       <option value="2">2</option>
@@ -16,22 +11,20 @@
       <option value="6">6</option>
       <option value="7">7</option>
     </select>
-    <input type="submit" value="Request to Book">
-  </form>
+  <input type="submit" value="Request to Book">
+</form>
 
-  <script>
-    var json_ranges = <%= @ranges %>
-    var ranges = json_ranges.map(range => JSON.parse(range));
-    var $input = $('#start_date').pickadate()
-    var picker = $input.pickadate('picker')
-    picker.set('select', true);
-    picker.set('min', <%= @min %>);
-    picker.set('max', <%= @max %>);
-    picker.set('disable', ranges);
+<script>
+  var json_ranges = <%= @ranges %>
+  var ranges = json_ranges.map(range => JSON.parse(range));
+  var $input = $('#start_date').pickadate()
+  var picker = $input.pickadate('picker')
+  picker.set('select', true);
+  picker.set('min', <%= @min %>);
+  picker.set('max', <%= @max %>);
+  picker.set('disable', ranges);
+  updateNightsAvailable(picker.get('select', 'yyyy-mm-dd'), <%= @unavailable_dates %>);
+  $('#start_date').change (function() {
     updateNightsAvailable(picker.get('select', 'yyyy-mm-dd'), <%= @unavailable_dates %>);
-    $('#start_date').change (function() {
-      updateNightsAvailable(picker.get('select', 'yyyy-mm-dd'), <%= @unavailable_dates %>);
-    });
-
-  </script>
-</body>
+  });
+</script>

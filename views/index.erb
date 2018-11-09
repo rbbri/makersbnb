@@ -1,37 +1,32 @@
-<body>
-<link rel="stylesheet" href="/style.css">
-
 <% if @user.nil? %>
   <div class='sign_up_form' align='center'>
-  <form id='sign_up' action='/users' method='post'>
-    <h3>Sign up to MakersBnB</h3>
-    <table id="sign_up_table">
-      <th></th>
-      <th></th>
-      <tr>
-        <td><label for='name' align='left'> Name  </label></td>
-        <td><input type="text" id='name' name='name'></td>
-      </tr>
-      <tr>
-        <td><label for='username' align='left'>Username</label></td>
-        <td><input type="text" id='username' name='username'></td>
-      </tr>
-      <tr>
-        <td><label for='password' align='left'> Password </label></td>
-        <td><input type="password" id='password' name='password'></td>
-      </tr>
-      <tr>
-      <td><label for='email' align='left'> Email Address  </label></td>
-      <td><input type="email" id='email' name='email'></td>
-    </tr>
-    <tr>
-  </tr>
-  </table>
-  <input style="width: 50%" type="submit" name="Sign Up" value="Sign Up">
-    <div>
-      <%= flash[:error] %>
-    </div>
+    <form id='sign_up' action='/users' method='post'>
+      <h3>Sign up to MakersBnB</h3>
+      <table id="sign_up_table">
+        <th></th>
+        <th></th>
+        <tr>
+          <td><label for='name' align='left'> Name  </label></td>
+          <td><input type="text" id='name' name='name'></td>
+        </tr>
+        <tr>
+          <td><label for='username' align='left'>Username</label></td>
+          <td><input type="text" id='username' name='username'></td>
+        </tr>
+        <tr>
+          <td><label for='password' align='left'> Password </label></td>
+          <td><input type="password" id='password' name='password'></td>
+        </tr>
+        <tr>
+          <td><label for='email' align='left'> Email Address  </label></td>
+          <td><input type="email" id='email' name='email'></td>
+        </tr>
+        <tr></tr>
+      </table>
+      <input style="width: 50%" type="submit" name="Sign Up" value="Sign Up">
+      <div>
+        <%= flash[:error] %>
+      </div>
+    </form>
   </div>
-
 <% end %>
-</body>
