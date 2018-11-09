@@ -9,6 +9,7 @@ require_relative './models/booking'
 require_relative './lib/booking_converter'
 require 'pry'
 require 'json'
+require 'date'
 
 def db_configuration
   db_configuration_file = './db/config.yml'
@@ -98,10 +99,13 @@ class MakersBNB < Sinatra::Base
 
   get '/spaces/:id' do
     @space = Space.find(params[:id])
+    @min = BookingConverter.arrayify([@space.start_date, Date.today].max)
+    @max = BookingConverter.arrayify(@space.end_date)
     @ranges = @space.bookings.all.map do |booking|
       BookingConverter.convert(booking)
     end
-    @start_dates = Booking.all.map { |booking| booking.start_date.to_s }
+    @unavailable_dates = Booking.all.map { |booking| booking.start_date.to_s }
+    @unavailable_dates.push((@space.end_date+1).to_s)
     erb :space_id, layout: :logged_in_header
   end
 
