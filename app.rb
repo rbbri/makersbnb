@@ -1,3 +1,4 @@
+require 'bcrypt'
 require 'sinatra/base'
 require 'sinatra/flash'
 require 'active_record'
@@ -44,10 +45,11 @@ class MakersBNB < Sinatra::Base
       flash[:error] = 'This email is already in use'
       redirect '/'
     end
+    password = BCrypt::Password.create(params[:password])
     user = User.create(
       name: params[:name],
       username: params[:username],
-      password: params[:password],
+      password: password,
       email: params[:email]
     )
     session[:user] = user
@@ -66,9 +68,8 @@ class MakersBNB < Sinatra::Base
   post '/sessions' do
     user = User.find_by(
       username: params[:username],
-      password: params[:password]
     )
-    if user.nil?
+    if user.nil? || BCrypt::Password.new(user.password) != params[:password]
       flash[:error] = 'Incorrect username or password'
       redirect '/sessions/new'
     end

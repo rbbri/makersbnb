@@ -22,6 +22,7 @@ group :development, :production do
   gem 'rake'
 end
 
+gem 'bcrypt'
 gem 'flog'
 gem 'json', '~> 1.6'
 gem 'pry'

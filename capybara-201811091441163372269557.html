@@ -1,0 +1,53 @@
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class='menu' align='right'>
+
+    <img src='/images/makers_logo.png' class="logo" align="left"></img>
+
+  <ul>
+    <li>
+      <form id="login_button" action = '/sessions/new'>
+        <input id="li_button" type="submit" value="LOGIN">
+      </form>
+    </li>
+    <li>
+      <form action = '/'>
+        <input id="li_button"type="submit" value="SIGN UP">
+      </form>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <body>
+  <link rel="stylesheet" href="/style.css">
+
+  <div class='log_in_form' align='center'>
+    <form id='log_in' method='post' action='/sessions'>
+      <h3>Log in to MakersBnB</h3>
+      <table id="sign_up_table">
+        <th></th>
+        <th></th>
+        <tr>
+        <td><label for='username'> Username </label></td>
+        <td><input type="text" id='username' name="username"></td>
+        </tr>
+        <tr>
+        <td><label for='password'> Password </label></td>
+        <td><input type="password" id='password' name="password"></td>
+        </tr>
+      <div>
+        Incorrect username or password
+      </div>
+    </table>
+      <p>
+        <input style="width: 50%"  type="submit" id="log_in" value="Login">
+      </p>
+  </div>
+</body>
+
+</div>
+</body>
