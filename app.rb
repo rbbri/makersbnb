@@ -2,14 +2,9 @@ require 'bcrypt'
 require 'sinatra/base'
 require 'sinatra/flash'
 require 'active_record'
-require_relative './models/user'
-require_relative './models/space'
-require_relative './models/request'
-require_relative './models/booking'
+Dir["./models/*.rb"].each {|file| require file }
 require_relative './lib/booking_converter'
-require 'pry'
-require 'json'
-require 'date'
+
 
 def db_configuration
   db_configuration_file = './db/config.yml'
