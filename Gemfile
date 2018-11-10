@@ -7,7 +7,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 group :test, :development, :production do
   gem 'capybara'
   gem 'coveralls', require: false
-  gem 'database_cleaner'
+  # gem 'database_cleaner'
   gem 'launchy'
   gem 'rspec'
   gem 'rubocop'
