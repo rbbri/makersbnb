@@ -221,6 +221,19 @@ li a:hover {
 .requests {
   text-align: center;
   margin: 0 auto;
+  width: 200px;
+}
+
+.requests_made {
+  text-align: center;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.requests_received {
+  text-align: center;
+  margin: 0 auto;
+  width: 200px;
 }
 
 

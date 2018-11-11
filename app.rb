@@ -1,4 +1,5 @@
-require_relative './requirements.rb'
+require 'sinatra/base'
+require './requirements.rb'
 
 # MakersBnB App
 class MakersBNB < Sinatra::Base

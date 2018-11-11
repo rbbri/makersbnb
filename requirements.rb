@@ -1,5 +1,4 @@
 require 'bcrypt'
-require 'sinatra/base'
 require 'sinatra/flash'
 require 'active_record'
 Dir["./models/*.rb"].each {|file| require file }
